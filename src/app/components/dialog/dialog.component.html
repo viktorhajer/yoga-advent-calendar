@@ -1,4 +1,19 @@
-<div class="">
-  {{ data.day }}
+<div class="dialog-content" *ngIf="data.document">
+  <div class="dialog_header">
+    <h2 class="title">
+      {{ data.document.title }}
+      <p *ngIf="data.document.src"><a target="_blank" [href]="data.document.src | safeUrl ">Forrás &#10140;</a></p>
+    </h2>
+    <div class="day">{{ data.day }}</div>
+  </div>
+  <div class="document-content">
+    <p class="description" *ngIf="data.document.description">{{ data.document.description }}</p>
+    <div class="image-container" *ngIf="data.document.image">
+      <img src="assets/{{data.document.image}}" />
+    </div>
+    <p *ngFor="let paraghraph of data.document.paragraphs">
+      {{ paraghraph }}
+    </p>
+  </div>
 </div>
 

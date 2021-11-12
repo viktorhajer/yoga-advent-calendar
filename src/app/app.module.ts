@@ -6,11 +6,13 @@ import {CommonModule} from '@angular/common';
 import {MatDialogModule} from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DialogComponent} from './components/dialog/dialog.component';
+import {SafeUrlPipe} from './components/safeurl.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DialogComponent
+    DialogComponent,
+    SafeUrlPipe
   ],
   imports: [
     CommonModule,

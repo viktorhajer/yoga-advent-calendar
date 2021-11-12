@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {DialogComponent} from '../components/dialog/dialog.component';
+import {STORIES} from '../repository/story.db';
 
 @Injectable({
   providedIn: 'root'
@@ -10,15 +11,16 @@ export class EventService {
   }
 
   openDay(day: number) {
+    const document = STORIES[0];
     this.dialog.open(DialogComponent, {
       disableClose: false,
-      data: {day}
+      data: {day, document}
     });
   }
 
   getRandomNumbers(maximum = 10, count = 3): number[] {
     const numbs: number[] = [];
-    while(numbs.length < count) {
+    while (numbs.length < count) {
       const randomNum = Math.floor(Math.random() * maximum);
       if (!numbs.some(n => n === randomNum)) {
         numbs.push(randomNum);

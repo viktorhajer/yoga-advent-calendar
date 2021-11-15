@@ -1,0 +1,28 @@
+$color_light_red: #ee7266;
+
+.quote-container {
+  color: #000000;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: italic;
+  text-shadow: none;
+  user-select: auto;
+  position: relative;
+  left: 0;
+  cursor: pointer;
+
+  p {
+    width: 100%;
+    margin: 0;
+    color: $color_light_red;
+
+    &.author {
+      text-align: right;
+      margin-top: 12px;
+      padding-top: 4px;
+      border-top: 2px dotted rgb(0 0 0 / 5%);
+      color: rgb(0 0 0 / 50%);
+      font-weight: bold;
+    }
+  }
+}

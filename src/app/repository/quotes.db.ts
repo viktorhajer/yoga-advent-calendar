@@ -82,10 +82,6 @@ export const QUOTES: QuoteModel[] = [
     author: 'Muktika Upanishad'
   },
   {
-    content: 'A Nap mindenkire egyformán süt, a virág mindenkinek egyformán ontja az illatát, s az idő is mindenki fölött egyformán múlik.',
-    author: 'Zoltai Miklós (Jóga: Út az élethez)'
-  },
-  {
     content: 'Törekedj önmagad által, jó tettekkel másokért cselekedni.',
     author: 'Bhagavad Gíta'
   },

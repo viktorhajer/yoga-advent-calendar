@@ -5,41 +5,38 @@
       <img src="assets/om.jpg"/>
       <p>Boldog Karácsonyt!</p>
     </div>
-    <div class="box box01" (click)="openDay(1)">1</div>
-    <div class="box box06" (click)="openDay(6)">6</div>
-    <div class="box box18" (click)="openDay(18)">18</div>
-    <div class="box box20" (click)="openDay(20)">20</div>
-    <div class="box box23" (click)="openDay(23)">23</div>
-    <div class="box box15" (click)="openDay(15)">15</div>
-    <div class="box box17" (click)="openDay(17)">17</div>
-    <div class="box box21" (click)="openDay(21)">21</div>
+    <div class="box box01" [class.inactive]="isInactive(1)" (click)="openDay(1)">1</div>
+    <div class="box box06" [class.inactive]="isInactive(6)" (click)="openDay(6)">6</div>
+    <div class="box box18" [class.inactive]="isInactive(18)" (click)="openDay(18)">18</div>
+    <div class="box box20" [class.inactive]="isInactive(20)" (click)="openDay(20)">20</div>
+    <div class="box box23" [class.inactive]="isInactive(23)" (click)="openDay(23)">23</div>
+    <div class="box box15" [class.inactive]="isInactive(15)" (click)="openDay(15)">15</div>
+    <div class="box box17" [class.inactive]="isInactive(17)" (click)="openDay(17)">17</div>
+    <div class="box box21" [class.inactive]="isInactive(21)" (click)="openDay(21)">21</div>
     <div class="card">
-      <p><span>&ldquo;</span>{{ getQuote(0).content }}&rdquo;</p>
-      <p class="author" *ngIf="getQuote(0).author">{{ getQuote(0).author }}</p>
+      <app-quote [quoteModel]="getQuote(randomQuotes[1])"></app-quote>
     </div>
-    <div class="box box07" (click)="openDay(7)">7</div>
-    <div class="box box08" (click)="openDay(8)">8</div>
+    <div class="box box07" [class.inactive]="isInactive(7)" (click)="openDay(7)">7</div>
+    <div class="box box08" [class.inactive]="isInactive(8)" (click)="openDay(8)">8</div>
     <div class="card">
-      <p><span>&ldquo;</span>{{ getQuote(1).content }}&rdquo;</p>
-      <p class="author" *ngIf="getQuote(1).author">{{ getQuote(1).author }}</p>
+      <app-quote [quoteModel]="getQuote(randomQuotes[0])"></app-quote>
     </div>
-    <div class="box box19" (click)="openDay(19)">19</div>
-    <div class="box box09" (click)="openDay(9)">9</div>
-    <div class="box box10" (click)="openDay(10)">10</div>
-    <div class="box box13" (click)="openDay(13)">13</div>
-    <div class="box box02" (click)="openDay(2)">2</div>
-    <div class="box box03" (click)="openDay(3)">3</div>
-    <div class="box box11" (click)="openDay(11)">11</div>
-    <div class="box box04" (click)="openDay(4)">4</div>
-    <div class="box box12" (click)="openDay(12)">12</div>
-    <div class="box box05" (click)="openDay(5)">5</div>
-    <div class="box box14" (click)="openDay(14)">14</div>
-    <div class="box box22" (click)="openDay(22)">22</div>
-    <div class="box box16" (click)="openDay(16)">16</div>
+    <div class="box box19" [class.inactive]="isInactive(19)" (click)="openDay(19)">19</div>
+    <div class="box box09" [class.inactive]="isInactive(9)" (click)="openDay(9)">9</div>
+    <div class="box box10" [class.inactive]="isInactive(10)" (click)="openDay(10)">10</div>
+    <div class="box box13" [class.inactive]="isInactive(13)" (click)="openDay(13)">13</div>
+    <div class="box box02" [class.inactive]="isInactive(2)" (click)="openDay(2)">2</div>
+    <div class="box box03" [class.inactive]="isInactive(3)" (click)="openDay(3)">3</div>
+    <div class="box box11" [class.inactive]="isInactive(11)" (click)="openDay(11)">11</div>
+    <div class="box box04" [class.inactive]="isInactive(4)" (click)="openDay(4)">4</div>
+    <div class="box box12" [class.inactive]="isInactive(12)" (click)="openDay(12)">12</div>
+    <div class="box box05" [class.inactive]="isInactive(5)" (click)="openDay(5)">5</div>
+    <div class="box box14" [class.inactive]="isInactive(14)" (click)="openDay(14)">14</div>
+    <div class="box box22" [class.inactive]="isInactive(22)" (click)="openDay(22)">22</div>
+    <div class="box box16" [class.inactive]="isInactive(16)" (click)="openDay(16)">16</div>
     <div class="card">
-      <p><span>&ldquo;</span>{{ getQuote(2).content }}&rdquo;</p>
-      <p class="author" *ngIf="getQuote(2).author">{{ getQuote(2).author }}</p>
+      <app-quote [quoteModel]="getQuote(randomQuotes[2])"></app-quote>
     </div>
-    <div class="box box24 big" (click)="openDay(24)">24</div>
+    <div class="box box24 big" [class.inactive]="isInactive(24)" (click)="openDay(24)">24</div>
   </div>
 </div>

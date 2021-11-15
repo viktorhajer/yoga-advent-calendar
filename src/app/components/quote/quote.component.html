@@ -1,0 +1,4 @@
+<div class="quote-container" [@changeText]="isVisible ? 'visible' : 'invisible'" (click)="openPage()">
+  <p class="content"><span>&ldquo;</span>{{ newQuote.content }}&rdquo;</p>
+  <p class="author" *ngIf="newQuote.author">{{ newQuote.author }}</p>
+</div>

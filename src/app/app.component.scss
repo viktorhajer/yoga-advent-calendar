@@ -1,6 +1,5 @@
 $color_light_gray: #d0ddcc;
 $color_light_green: #24535b;
-//$color_light_green: linear-gradient(45deg, #24535b, #346d76);
 $color_light_red: #ee7266;
 $color_light_main: #000000;
 $color_light_card: #ffffff;
@@ -48,6 +47,18 @@ $color_light_card: #ffffff;
   transition: 0.2s ease-in-out;
   position: relative;
 
+  &.inactive {
+    filter: blur(2px) sepia(0.3) grayscale(0.2);
+    opacity: 0.8;
+    cursor: auto;
+  }
+
+  &.inactive:hover {
+    filter: blur(2px) sepia(0.3) grayscale(0.2);
+    opacity: 0.8;
+    cursor: auto;
+  }
+
   &.active {
     background: black;
     color: $color_light_red;
@@ -57,7 +68,7 @@ $color_light_card: #ffffff;
   }
 }
 
-.box:hover {
+.box:not(.inactive):hover {
   background: #000000;
   font-size: 50px;
 }
@@ -102,42 +113,20 @@ $color_light_card: #ffffff;
   float: left;
   display: flex;
   flex-flow: column;
-  align-items: center;
   justify-content: center;
   width: 288px;
   height: 124px;
-  color: #000000;
   background: $color_light_card;
-  font-size: 12px;
   padding: 20px;
-  font-weight: normal;
-  font-style: italic;
-  text-shadow: none;
-  cursor: auto;
-  user-select: auto;
   box-shadow: 2px 3px 3px rgb(0 0 0 / 20%);
   position: relative;
+  z-index: 1;
 }
 
 .big {
   width: 288px;
   height: 124px;
   padding: 20px;
-}
-
-p {
-  width: 100%;
-  margin: 0;
-  color: $color_light_red;
-
-  &.author {
-    text-align: right;
-    margin-top: 12px;
-    padding-top: 4px;
-    border-top: 2px dotted rgb(0 0 0 / 5%);
-    color: rgb(0 0 0 / 50%);
-    font-weight: bold;
-  }
 }
 
 .box01, .box04, .box18, .box10, .box13, .box16, .box19, .box24 {
@@ -152,4 +141,5 @@ p {
   background: $color_light_red;
   box-shadow: 2px 3px 3px rgb(0 0 0 / 20%);
   position: relative;
+  z-index: 1;
 }

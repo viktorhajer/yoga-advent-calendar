@@ -1,22 +1,10 @@
+$color_light_red: #ee7266;
+
 .dialog_header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 15px;
-
-  .title {
-    p {
-      margin: 0;
-      padding: 0;
-      line-height: 12px;
-    }
-    a {
-      font-size: 12px;
-      text-decoration: none;
-      color: #000;
-      outline: none;
-    }
-  }
 
   .day {
     font-size: 27px;
@@ -44,11 +32,28 @@
 
     p {
       text-align: justify;
-    }
+      margin: 0 0 20px 0;
+      padding: 0;
 
-    .description {
-      font-style: italic;
-      color: #999;
+      &.nospace {
+        margin: 0 0 3px 0;
+      }
+
+      &.contraindication {
+        color: $color_light_red;
+      }
+    }
+  }
+
+  .src-container {
+    border-top: 1px dotted lightgray;
+    padding-top: 6px;
+
+    a {
+      font-size: 12px;
+      text-decoration: none;
+      color: #000;
+      outline: none;
     }
   }
 }

@@ -4,14 +4,16 @@ import {AppComponent} from './app.component';
 import {CommonModule} from '@angular/common';
 import {MatDialogModule} from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {DialogComponent} from './components/dialog/dialog.component';
+import {DayDialogComponent} from './components/day-dialog/day-dialog.component';
 import {SafeUrlPipe} from './components/safeurl.pipe';
 import {QuoteComponent} from './components/quote/quote.component';
+import {WelcomeDialogComponent} from './components/welcome-dialog/welcome-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DialogComponent,
+    DayDialogComponent,
+    WelcomeDialogComponent,
     QuoteComponent,
     SafeUrlPipe
   ],

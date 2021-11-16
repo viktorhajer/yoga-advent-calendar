@@ -4,6 +4,18 @@ $color_light_red: #ee7266;
 $color_light_main: #000000;
 $color_light_card: #ffffff;
 
+@keyframes activeBox {
+  0% {
+    background-color: #000000;
+  }
+  50% {
+    background-color: #1a3b43;
+  }
+  100% {
+    background-color: #000000;
+  }
+}
+
 .header {
   background: #ffffff;
   color: $color_light_red;
@@ -13,6 +25,13 @@ $color_light_card: #ffffff;
   text-align: center;
   border-bottom: 2px solid #ddd;
   opacity: 0;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 13px;
+  font-size: 10px;
+  color: #2f2f2f;
 }
 
 .content {
@@ -28,6 +47,7 @@ $color_light_card: #ffffff;
   padding: 10px;
   background: $color_light_card;
   box-shadow: 4px 4px 3px rgb(0 0 0 / 10%);
+  border: 1px solid rgb(0 0 0 / 20%);
 }
 
 .box {
@@ -60,11 +80,10 @@ $color_light_card: #ffffff;
   }
 
   &.active {
-    background: black;
     color: $color_light_red;
-    border: 10px solid white;
-    width: 144px;
-    height: 144px;
+    animation-name: activeBox;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
   }
 }
 

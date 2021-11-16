@@ -1,9 +1,9 @@
 export class DocumentModel {
   title = '';
-  type ?= ''
-  src ?= '';
-  image ?= '';
-  paragraphs?: {c: string, nl: boolean}[] = [];
+  type ? = '';
+  src ? = '';
+  image ?: { src: string, dir: string };
+  paragraphs?: { c: string, nl: boolean }[] = [];
   moreInfo?: string[] = [];
-  contraindication ?= '';
+  contraindication ? = '';
 }

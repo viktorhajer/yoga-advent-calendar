@@ -8,8 +8,11 @@
     <div class="day">{{ data.day }}</div>
   </div>
   <div class="document-content"  (click)="close()">
-    <div class="image-container" *ngIf="data.document.image">
-      <img src="assets/{{data.document.image}}" />
+    <div class="image-container" *ngIf="data.document.image"
+         [class.total]="data.document.image.dir === 't'"
+         [class.left]="data.document.image.dir === 'l'"
+         [class.right]="data.document.image.dir === 'r'">
+      <img src="assets/images/{{data.document.image.src}}" />
     </div>
     <p *ngFor="let p of data.document.paragraphs" [class.nospace]="!p.nl">
       {{ p.c }}

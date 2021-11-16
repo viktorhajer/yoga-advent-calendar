@@ -4,6 +4,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Marjari - Macska',
     type: 'asana',
+    image: { src: 'marjari.jpg', dir: 't' },
     paragraphs: [
       {
         c: 'Lazítja, ezáltal hajlékonnyá és rugalmassá teszi az izmokat a gerinc mentén. Ezenkívül jó hatású az emésztőrendszerre és különösen a női szervekre (enyhíti a menstruációs görcsöket), alkalmas a mély hasi és mellkasi légzés elsajátítására.',
@@ -19,6 +20,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Csavarás felhúzott lábbal',
     type: 'asana',
+    image: { src: 'csavaras.jpg', dir: 't' },
     paragraphs: [
       {
         c: 'Lazítja a nyakat és az egész hátat, javítja a gerinc és a csípőízület hajlékonyságát és hatásos csípő-, valamint keresztcsonti ízületi bántalmak ellen.',
@@ -35,6 +37,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Dvikonasana - Dupla háromszög',
     type: 'asana',
+    image: { src: 'dvikonasana.jpg', dir: 'r' },
     paragraphs: [
       {
         c: 'Segíti a gyerekek egészséges fejlődését. Lazítja a hátizomzatot, segít megelőzni a púpos hát kialakulását. Növeli a vállízület mozgathatóságát, illetve hajlékonyságát, szabályozza a vérkeringést és fokozza a fej minden részének vérellátását.',
@@ -51,6 +54,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Ashva Sanchalanasana - Lovaglás',
     type: 'asana',
+    image: { src: 'ashva_sanchalanasana.jpg', dir: 't' },
     paragraphs: [
       {
         c: 'Javítja az erőnlétet, erősíti a hát-, a has- és a combizomzatot. Fokozza a térdízület mozgathatóságát, javítja a testtartást, megelőzi a hátfájást. Előkészíti a meditációs ülőhelyzetet.',
@@ -67,6 +71,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Trikonasana - Háromszög állás',
     type: 'asana',
+    image: { src: 'trikonasana.jpg', dir: 'l' },
     paragraphs: [
       {
         c: 'Harmonizálja az idegrendszer működését. Javítja a gerinc hajlékonyságát és a láb stabilitását. Nyújtja a törzs oldalsó izmait és a combhajlító izmokat. Harmonizálja és elmélyíti a légzést, fokozottan a mellkas adott oldalsó részeiben. Szorulás, illetve székrekedés esetén segít, ha egy-két csésze enyhén sós, langyos vizet iszunk a gyakorlás előtt.',
@@ -82,6 +87,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Vyaghrasana - Tigris állás',
     type: 'asana',
+    image: { src: 'vyaghrasana.jpg', dir: 'l' },
     paragraphs: [
       {
         c: 'Megőrzi és javítja a gerinc rugalmasságát és a csípőízület mozgathatóságát. Erősíti a has-, a hát-, a far-, a csípő- és a lábizomzatot, harmonizálja a légzést. Hasznos gyakorlat kismamáknak a szülés után.',
@@ -97,6 +103,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Viparitakarani Mudra - Váll-könyök állás',
     type: 'asana',
+    image: { src: 'viparitakarani_mudra.jpg', dir: 'r' },
     paragraphs: [
       {
         c: 'Frissíti az egész szervezetet, harmonizálja a mirigyek működését. Hatásos stressz és depresszió ellen. Javítja a vénás és nyirokkeringést, segít lábduzzanatok és vénaproblémák esetén. Lazítja a medencetájék szerveit, egyben javítja a vérellátásukat. Hatékony alacsony vérnyomás esetén.',
@@ -113,6 +120,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Virasana - Hősi póz',
     type: 'asana',
+    image: { src: 'virasana.jpg', dir: 'l' },
     paragraphs: [
       {
         c: 'Fejleszti az összpontosító képességet. Nyugtató hatású, oldja a szorongást. Segíti a lábboltozat természetes ívének kialakulását.',
@@ -129,6 +137,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Triyak Bhujangasana - Gerinccsavarás kobrában',
     type: 'asana',
+    image: { src: 'triyak_bhujangasana.jpg', dir: 't' },
     paragraphs: [
       {
         c: 'Megőrzi a gerinc rugalmasságát és hajlékonyságát, fejleszti a hátizmokat, segít megelőzni a porckorongsérvet. Nagyon ajánlott azoknak, akik sok időt töltenek ülő helyzetben, jó székrekedés ellen. Harmonizálja a testet és az elmét, és ezt a kiegyensúlyozó hatást különösen a vese és a női szervek működésére fejti ki.',
@@ -145,6 +154,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Khatu Pranam - Üdvözlet Khatunak',
     type: 'asana',
+    image: { src: 'khatu_pranam.jpg', dir: 'l' },
     paragraphs: [
       {
         c: 'A Khatu Pranam egyensúlyt teremt testi, lelki és szellemi működésünkben.',
@@ -169,6 +179,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Nadi Shodhana Pranayama 3. szint',
     type: 'asana',
+    image: { src: 'nadi_sodhana.jpg', dir: 'r' },
     paragraphs: [
       {
         c: 'A nadi az éltető energiát, érzéseket közvetíti a finom- és a durva fizikai testben. A sodhana finomítást, tisztítást, így a nadi sodhana az energia- és idegpályák megtisztítását jelenti. Ezen légzés lényege, hogy csak egy orrlyukon keresztül történik a légzés. Tisztítja a légutakat. A mély légzés révén oxigénnel dúsítja a vért. Erősíti a légzőszerveket, kiegyensúlyozza az idegrendszert, hatásos idegesség ellen és enyhíti a fejfájást.',
@@ -184,6 +195,7 @@ export const ASANAS: DocumentModel[] = [
   },
   {
     title: 'Jóganidra és lazítás',
+    type: 'asana',
     paragraphs: [
       {
         c: 'A fizikai és mentális test pihentetése és regenerációja hozzásegít, hogy jobban tudjunk teljesíteni, és előre haladhassunk spirituális utunkon. A lazítás nem egyenlő a lustasággal, sőt, nagyon távol áll tőle. Ahhoz, hogy a jógagyakorlatok maradéktalanul kifejthessék a hatásukat, meg kell tanulnunk a gyakorlatok előtti és közötti helyes ellazulást. Az alábbiakban ezért ismertetésre kerül néhány lazítótechnika és testhelyzet. Vannak technikák, amelyek az egész testet ellazítják és szellemi ellazulást is eredményeznek, és vannak, amelyek célzottan bizonyos testrészekre irányulnak. Egy idő után magunk is meg tudjuk ítélni, hogy mely gyakorlat után milyen lazító testhelyzet a legkényelmesebb a számunkra.',
@@ -198,6 +210,7 @@ export const ASANAS: DocumentModel[] = [
   },
   {
     title: 'Önvizsgálati meditáció',
+    type: 'asana',
     paragraphs: [
       {
         c: 'Az önvizsgálati meditáció technikái segítenek a jobb önmegismerés, az önuralom és az önmegvalósítás eléréséhez, amelyek révén megtapasztalhatjuk és kibontakoztathatjuk önmagunkban az Isteni Önvalót (átmát). Ilyen fenséges és nagy célt nem lehet máról holnapra elérni. Megvalósításához önfegyelemre, gyakorlásra és egy Mester irányítására van szükség.',

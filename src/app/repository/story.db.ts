@@ -4,7 +4,6 @@ export const STORIES: DocumentModel[] = [
   {
     title: 'A paras kő',
     type: 'lecture',
-    image: 'paras.jpg',
     paragraphs: [
       {
         c: 'A paras kő egy különleges kő, melyet ha hozzáérintesz bármihez, az arannyá változik. ',
@@ -484,17 +483,81 @@ export const STORIES: DocumentModel[] = [
     src: 'https://youtu.be/68BmNILoRek',
     paragraphs: [
       {
-        c: 'yyyy',
+        c: 'Nagyon jó kérdés, ha Isten mindenben ott van, akkor ezt hogyan érzékelhetjük. A mi tudatlanságunk, hogy annak ellenére, hogy Isten köztünk van, mi nem látjuk és nem halljuk őt. Isten mint Atma van jelen a szívünkben. Minden jó tapasztalás, érzés tőle származik.',
+        nl: true
+      },
+      {
+        c: 'Egyszer egy mester azt mondta a tanítványainak, hogy Isten mindenben ott van. Bennem, benned, az állatokban, a vízben, a tűzben, mindenhol mindenben. Pár nappal később az egyik tanítványa a falu főutcáján sétált, amikor megjelent egy elszabadult, megvadult elefánt. Tört-zúzott, csapkodott, és így közelített a tanítvány felé. A tanítvány bízva mestere szavában büszkén kihúzta magát, és folytatta a sétát. Közben az emberek az utcán igyekeztek biztonságba vonulni, felmásztak a házak tetejére, és onnan kiabáltak a tanítványnak, hogy meneküljön, különben a megvadult elefánt megsebesíti vagy talán még meg is öli. ',
+        nl: true
+      },
+      {
+        c: 'A tanítvány azt válaszolta, hogy a mestere tanítása szerint Isten mindenben ott van, így az elefántban is, ezért az nem árthat neki. Csak folytatta a sétát a főúton, nem vett tudomást az eseményekről. Ekkor az elefánt odarohant hozzá, mérgesen felkapta az ormányával és elhajította jó messzire. A tanítványnak sok csontja eltört a hatalmas eséstől, alig tudott megmozdulni. ',
+        nl: true
+      },
+      {
+        c: 'Amikor következőleg találkozott a mesterével, nagyon szomorú és csalódott volt. Azt mondta:',
+        nl: false
+      },
+      {
+        c: '- Mester, azt tanítottad nekem, hogy Isten mindenben ott van, bennem, benned, az állatokban... Akkor Isten hogy tudta ezt tenni velem?',
+        nl: false
+      },
+      {
+        c: 'A mester azt felelte: ',
+        nl: false
+      },
+      {
+        c: '- Igazad van kedves tanítványom, de hibát követtél el. Talán azokban az emberekben nem volt ott Isten, akik próbáltak téged figyelmeztetni, hogy menekülj el az elefánt elől?',
+        nl: false
+      },
+      {
+        c: 'A tanítvány lesütötte a szemét. A mester folytatta:',
+        nl: false
+      },
+      {
+        c: '- Tehát Isten mondta neked, hogy fuss el, de te nem tetted. Nagyon egyszerű ítélkezni, de nagyon nehéz megérteni.',
+        nl: true
+      },
+      {
+        c: 'Mire tanít Sri Mahaprabhuji? Szeresd Istent tiszta szívvel. Isten fénye minden élőlényben ott van. Szeretni és szolgálni őket Isten szolgálatát jelenti.',
         nl: true
       }
     ]
   },
   {
-    title: 'xxxx',
+    title: 'A két testvér története',
     type: 'lecture',
     paragraphs: [
       {
-        c: 'yyyy',
+        c: 'Élt egyszer réges-régen Indiában két testvérpár. Mindketten érdeklődtek a lelki élet iránt, és úgy alakult, hogy szerzetesek lettek. De az élet messzire sodorta őket egymástól.',
+        nl: true
+      },
+      {
+        c: 'Az idősebb testvér számos iskolát végzett el, megtanulta a jóga ősi bölcsességéből, amit meg lehetett, a Gítát, a Védákat, az Upanisadokat. Tudta, hogyan kell elvégezni a szertartásokat, ismerte a megfelelő mantrákat. A közösség, ahol élt, megismerte és elismerte a munkáját. Megbecsült tudós lett belőle.',
+        nl: true
+      },
+      {
+        c: 'Egy alkalommal az idősebb testvér felkereste az öccsét, aki egy folyó partján élt egy kunyhóban. Szerényen élt, foltozott ruhában, csak ült, meditált, etette az állatokat. Ahogy a bátyja meglátta a testvérét, csak csóválta a fejét. Örömmel köszöntötték egymást, sokat beszélgettek. ',
+        nl: true
+      },
+      {
+        c: 'A bölcs, tudós testvér szomorú volt, hogy az öccse még olvasni sem tud, és sok nagyon fontos mantrát sem ismer. Korholta is egy ideig, majd elkezdte tanítani a testvérét, kihangsúlyozva, hogyan kell kiejteni a mantrákat, milyen hangsúllyal, milyen hosszan. Az öccse próbálkozott a legjobb tudása szerint. ',
+        nl: true
+      },
+      {
+        c: 'Amikor másnap reggel elbúcsúztak, megígérte, hogy minden nap a megfelelő módon fogja a mantrákat zengetni, az imákat mondani. Miután az idősebb testvér csónakba szállt, és a révész átvitte a túlsó partra, az öccse nem vesztegette az idejét, leült, és a testvérétől tanult mantrákat kezdte ismételni. Ám elakadt a közepén, sehogyan sem jutott eszébe a mantra folytatása. ',
+        nl: true
+      },
+      {
+        c: 'Kinyitotta a szemét, kirohant a folyópartra. A bátyja már átért a túlsó partra, és hiába kiabált, hogy elfelejtette a mantrát, messze volt és nem hallotta. Így gondolkodás nélkül nekiiramodott, és a víz tetején kiabálva futott a bátyja felé. Aki meghallva a kiabálást megfordult és döbbenten látta, hogy az öccse a víz tetején futva jön felé.',
+        nl: true
+      },
+      {
+        c: 'Mikor a fiatalabb testvér átért, lihegve kérte a bátyját, hogy mondja el neki még egyszer a mantrát, mert elfelejtette. A bátyja szó nélkül leborult és megérintette az öccse lábát, majd csak ennyit mondott: Nincs szükséged arra, hogy pontosan ismételd a mantrákat. Bocsánatodat kérem.',
+        nl: true
+      },
+      {
+        c: 'Mire tanít Sri Mahaprabhuji? Ne légy eltelve sem gazdagságoddal, sem tudásoddal. Mindig akad nálad jobb.',
         nl: true
       }
     ]

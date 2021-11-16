@@ -16,9 +16,22 @@ $color_light_red: #ee7266;
   width: 800px;
 
   .image-container {
-    max-width: 45%;
     margin: 0 15px 5px 0;
-    float: left;
+    height: 270px;
+
+    &.total {
+      width: 760px;
+    }
+
+    &.left {
+      width: 300px;
+      float: left;
+    }
+
+    &.right {
+      width: 300px;
+      float: right;
+    }
 
     img {
       width: 100%;

@@ -45,6 +45,11 @@ export class AppComponent {
     return 2021 === now.getFullYear() && (11 === now.getMonth() && day > now.getDate()) || (11 > now.getMonth()) && !this.allEnabled;
   }
 
+  isActive(day: number): boolean {
+    const now = new Date();
+    return 2021 === now.getFullYear() && (GOD_MODE ? 10 : 11) === now.getMonth() && day === now.getDate() ;
+  }
+
   toggleEnable(){
     if (GOD_MODE) {
       this.allEnabled = !this.allEnabled;

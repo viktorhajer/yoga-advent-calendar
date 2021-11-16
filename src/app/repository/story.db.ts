@@ -4,6 +4,7 @@ export const STORIES: DocumentModel[] = [
   {
     title: 'A paras kő',
     type: 'lecture',
+    image: { src: 'paras.jpg', dir: 'l' },
     paragraphs: [
       {
         c: 'A paras kő egy különleges kő, melyet ha hozzáérintesz bármihez, az arannyá változik. ',
@@ -93,6 +94,7 @@ export const STORIES: DocumentModel[] = [
   {
     title: 'A két testvér',
     type: 'lecture',
+    image: { src: 'ket_testver.jpg', dir: 'l' },
     src: 'https://www.youtube.com/watch?v=cecDolzZQ4Q',
     paragraphs: [
       {
@@ -216,6 +218,7 @@ export const STORIES: DocumentModel[] = [
   {
     title: 'A jógi és a skorpió',
     type: 'lecture',
+    image: { src: 'skorpio.jpg', dir: 'l' },
     paragraphs: [
       {
         c: 'Volt egyszer egy jógi, aki minden nap meditált egy folyó közelében. Az egyik nap észrevette, hogy egy skorpió vergődik a vízben, sehogyan sem tud kiúszni. A jógi azonnal a segítségére sietett. Megpróbálta kihúzni egy bot segítségével, de sajnos sikertelenül, a skorpió folyton leesett.',
@@ -246,6 +249,7 @@ export const STORIES: DocumentModel[] = [
   {
     title: 'A jógi és a hangya',
     type: 'lecture',
+    image: { src: 'hangya.jpg', dir: 'l' },
     src: 'https://youtu.be/88fzAt7z66E',
     paragraphs: [
       {
@@ -420,6 +424,7 @@ export const STORIES: DocumentModel[] = [
     title: 'Lábnyom a homokban',
     type: 'lecture',
     src: 'https://youtu.be/mUT_KNWgBq8',
+    image: { src: 'labnyomok.jpg', dir: 't' },
     paragraphs: [
       {
         c: 'Egy ember azt álmodta, hogy elérkezett élete végéhez. Visszatekintve úgy látta életét, mint egy tengerparti sétát az Úrral. Az út java részén két pár lábnyom futott párhuzamosan a homokban – az egyik az övé, a másik az Úré. Ám azt vette észre, hogy élete legnehezebb, legszomorúbb szakaszain csupán egy pár lábnyom látható. Ez nem hagyta őt nyugodni, és megkérdezte felőle az Urat:',
@@ -481,6 +486,7 @@ export const STORIES: DocumentModel[] = [
     title: 'Isten bennünk van',
     type: 'lecture',
     src: 'https://youtu.be/68BmNILoRek',
+    image: { src: 'elefant.jpg', dir: 'l' },
     paragraphs: [
       {
         c: 'Nagyon jó kérdés, ha Isten mindenben ott van, akkor ezt hogyan érzékelhetjük. A mi tudatlanságunk, hogy annak ellenére, hogy Isten köztünk van, mi nem látjuk és nem halljuk őt. Isten mint Atma van jelen a szívünkben. Minden jó tapasztalás, érzés tőle származik.',

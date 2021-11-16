@@ -37,7 +37,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Karkeresztezés a fej fölött',
     type: 'asana',
-    image: { src: 'dvikonasana.jpg', dir: 'r' },
+    image: { src: 'karkeresztezes.jpg', dir: 'r' },
     paragraphs: [
       {
         c: 'Ellazítja és megnyugtatja a testet, a légzést és az elmét. Lazítja és erősíti a hátizomzatot, mozgathatóbbá teszi a vállízületet. Segíti a légzőizmok munkáját a mellkas oldalsó részében.',
@@ -53,7 +53,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Pavana Muktasana - Térdhúzás a törzshöz',
     type: 'asana',
-    image: { src: 'ashva_sanchalanasana.jpg', dir: 't' },
+    image: { src: 'pavana_muktasana.jpg', dir: 't' },
     paragraphs: [
       {
         c: 'Nyújtja a hát alsó részét és a csípőizomzatot. Segít szorulás, bélpuffadás és egyéb emésztési zavarok esetén, felfrissíti a szervezetet.',
@@ -69,7 +69,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Malomkörzés',
     type: 'asana',
-    image: { src: 'trikonasana.jpg', dir: 'l' },
+    image: { src: 'malomkorzes.jpg', dir: 't' },
     paragraphs: [
       {
         c: 'Hajlékonyabbá teszi a csípőízületet és erősíti a hasizmokat. A farizmokra gyakorolt hatása leginkább lazító masszázshoz hasonlítható. Élénkíti a vérkeringést és jó hatású a manipura csakrára.',
@@ -86,7 +86,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'A nyak lazítása',
     type: 'asana',
-    image: { src: 'vyaghrasana.jpg', dir: 'l' },
+    image: { src: 'nyak.jpg', dir: 'l' },
     paragraphs: [
       {
         c: 'Lazítja a tarkót, valamint a nyak- és a válltájékot.',
@@ -103,7 +103,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Kerékpározás hanyatt fekvésben',
     type: 'asana',
-    image: { src: 'viparitakarani_mudra.jpg', dir: 'r' },
+    image: { src: 'kerekparozas.jpg', dir: 't' },
     paragraphs: [
       {
         c: 'Erősíti a has- és lábizomzatot. Javítja a csípőízület és a térd mozgathatóságát. Fokozza a vérkeringést, különösen a lábakban, hatásos visszerek kialakulása ellen. Lazítja a csípő-, térd- és lábízületet, javítja a vérellátásukat. Előkészíti a meditációs ülőhelyzetet.',
@@ -120,7 +120,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Pillangó',
     type: 'asana',
-    image: { src: 'virasana.jpg', dir: 'l' },
+    image: { src: 'pillango.jpg', dir: 'l' },
     paragraphs: [
       {
         c: 'Előkészíti a meditációs ülőhelyzetet. Lazítja a csípőízületet és javítja vérellátását.',
@@ -136,7 +136,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Térdhúzás a törzshöz',
     type: 'asana',
-    image: { src: 'triyak_bhujangasana.jpg', dir: 't' },
+    image: { src: 'terd.jpg', dir: 'r' },
     paragraphs: [
       {
         c: 'Segít emésztési zavarok, felfúvódás és hátfájás esetén. Nyújtja az izmokat az ágyékcsigolyák és csípőízület környékén. Fejleszti a lábak stabilitását, az egyensúlyérzéket és az összpontosító képességet.',
@@ -152,7 +152,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Bari Khatu Pranam - Üdvözlet Khatunak',
     type: 'asana',
-    image: { src: 'khatu_pranam.jpg', dir: 'l' },
+    image: { src: 'mahaprabuji.jpg', dir: 'l' },
     paragraphs: [
       {
         c: 'A Khatu Pranam egyensúlyt teremt testi, lelki és szellemi működésünkben.',
@@ -194,6 +194,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Jóganidra és lazítás',
     type: 'asana',
+    image: { src: 'yoga_nidra.jpg', dir: 't' },
     paragraphs: [
       {
         c: 'A fizikai és mentális test pihentetése és regenerációja hozzásegít, hogy jobban tudjunk teljesíteni, és előre haladhassunk spirituális utunkon. A lazítás nem egyenlő a lustasággal, sőt, nagyon távol áll tőle. Ahhoz, hogy a jógagyakorlatok maradéktalanul kifejthessék a hatásukat, meg kell tanulnunk a gyakorlatok előtti és közötti helyes ellazulást. Az alábbiakban ezért ismertetésre kerül néhány lazítótechnika és testhelyzet. Vannak technikák, amelyek az egész testet ellazítják és szellemi ellazulást is eredményeznek, és vannak, amelyek célzottan bizonyos testrészekre irányulnak. Egy idő után magunk is meg tudjuk ítélni, hogy mely gyakorlat után milyen lazító testhelyzet a legkényelmesebb a számunkra.',
@@ -209,6 +210,7 @@ export const ASANAS: DocumentModel[] = [
   {
     title: 'Meditáció Vishwagurujival',
     type: 'asana',
+    image: { src: 'swamiji.jpg', dir: 'l' },
     paragraphs: [
       {
         c: 'Az önvizsgálati meditáció technikái segítenek a jobb önmegismerés, az önuralom és az önmegvalósítás eléréséhez, amelyek révén megtapasztalhatjuk és kibontakoztathatjuk önmagunkban az Isteni Önvalót (átmát). Ilyen fenséges és nagy célt nem lehet máról holnapra elérni. Megvalósításához önfegyelemre, gyakorlásra és egy Mester irányítására van szükség.',

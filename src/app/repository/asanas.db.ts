@@ -35,121 +35,119 @@ export const ASANAS: DocumentModel[] = [
     contraindication: 'Heveny porckorongbántalmak esetén az a és a b változat is mellőzendő.'
   },
   {
-    title: 'Dvikonasana - Dupla háromszög',
+    title: 'Karkeresztezés a fej fölött',
     type: 'asana',
     image: { src: 'dvikonasana.jpg', dir: 'r' },
     paragraphs: [
       {
-        c: 'Segíti a gyerekek egészséges fejlődését. Lazítja a hátizomzatot, segít megelőzni a púpos hát kialakulását. Növeli a vállízület mozgathatóságát, illetve hajlékonyságát, szabályozza a vérkeringést és fokozza a fej minden részének vérellátását.',
+        c: 'Ellazítja és megnyugtatja a testet, a légzést és az elmét. Lazítja és erősíti a hátizomzatot, mozgathatóbbá teszi a vállízületet. Segíti a légzőizmok munkáját a mellkas oldalsó részében.',
         nl: true
       },
       {
-        c: 'Végezd el háromszor a gyakorlatot.',
+        c: 'Végezd el ötször a gyakorlatot.',
         nl: true
       }
     ],
-    src: 'https://www.yogaindailylife.org/system/hu/2-szint/dvikonasana',
-    contraindication: 'Magas vérnyomás és szédülékenység esetén a gyakorlat mellőzendő.'
+    src: 'https://www.yogaindailylife.org/system/hu/1-szint/sarva-hita-%C3%A1szan%C3%A1k-1-r%C3%A9sz/karkeresztez%C3%A9s-a-fej-f%C3%B6l%C3%B6tt'
   },
   {
-    title: 'Ashva Sanchalanasana - Lovaglás',
+    title: 'Pavana Muktasana - Térdhúzás a törzshöz',
     type: 'asana',
     image: { src: 'ashva_sanchalanasana.jpg', dir: 't' },
     paragraphs: [
       {
-        c: 'Javítja az erőnlétet, erősíti a hát-, a has- és a combizomzatot. Fokozza a térdízület mozgathatóságát, javítja a testtartást, megelőzi a hátfájást. Előkészíti a meditációs ülőhelyzetet.',
+        c: 'Nyújtja a hát alsó részét és a csípőizomzatot. Segít szorulás, bélpuffadás és egyéb emésztési zavarok esetén, felfrissíti a szervezetet.',
         nl: true
       },
       {
-        c: 'Egy kör 10 lábhajlításból és -nyújtásból áll. Végezz 3 kört.',
+        c: 'Végezz mindkét lábbal 3-3 kört.',
         nl: true
       }
     ],
-    src: 'https://www.yogaindailylife.org/system/hu/2-szint/ashva-sanchalanasana-a',
-    contraindication: 'Menstruáció idején és előrehaladott terhességnél a gyakorlat mellőzendő.'
+    src: 'https://www.yogaindailylife.org/system/hu/1-szint/sarva-hita-%C3%A1szan%C3%A1k-2-r%C3%A9sz/pavana-muktasana'
   },
   {
-    title: 'Trikonasana - Háromszög állás',
+    title: 'Malomkörzés',
     type: 'asana',
     image: { src: 'trikonasana.jpg', dir: 'l' },
     paragraphs: [
       {
-        c: 'Harmonizálja az idegrendszer működését. Javítja a gerinc hajlékonyságát és a láb stabilitását. Nyújtja a törzs oldalsó izmait és a combhajlító izmokat. Harmonizálja és elmélyíti a légzést, fokozottan a mellkas adott oldalsó részeiben. Szorulás, illetve székrekedés esetén segít, ha egy-két csésze enyhén sós, langyos vizet iszunk a gyakorlás előtt.',
+        c: 'Hajlékonyabbá teszi a csípőízületet és erősíti a hasizmokat. A farizmokra gyakorolt hatása leginkább lazító masszázshoz hasonlítható. Élénkíti a vérkeringést és jó hatású a manipura csakrára.',
         nl: true
       },
       {
-        c: 'Változatonként végezz 3 kört mindkét oldalra.',
+        c: 'Végezd mindkét irányba 10-szer.',
         nl: true
       }
     ],
-    src: 'https://www.yogaindailylife.org/system/hu/3-szint/trikonasana'
+    src: 'https://www.yogaindailylife.org/system/hu/1-szint/sarva-hita-%C3%A1szan%C3%A1k-2-r%C3%A9sz/malomk%C3%B6rz%C3%A9s',
+    contraindication: 'Hasműtét után, valamint porckorongbántalmak, isiászra való hajlam és terhesség esetén a gyakorlat mellőzendő.'
   },
   {
-    title: 'Vyaghrasana - Tigris állás',
+    title: 'A nyak lazítása',
     type: 'asana',
     image: { src: 'vyaghrasana.jpg', dir: 'l' },
     paragraphs: [
       {
-        c: 'Megőrzi és javítja a gerinc rugalmasságát és a csípőízület mozgathatóságát. Erősíti a has-, a hát-, a far-, a csípő- és a lábizomzatot, harmonizálja a légzést. Hasznos gyakorlat kismamáknak a szülés után.',
+        c: 'Lazítja a tarkót, valamint a nyak- és a válltájékot.',
         nl: true
       },
       {
-        c: 'Egy kör 5-5 lábemelésből áll. Végezz 2 kört.',
+        c: 'Végezd el mindhárom változatot 5-ször.',
         nl: true
       }
     ],
-    src: 'https://www.yogaindailylife.org/system/hu/3-szint/vyaghrasana'
+    src: 'https://www.yogaindailylife.org/system/hu/1-szint/sarva-hita-%C3%A1szan%C3%A1k-3-r%C3%A9sz/a-nyak-laz%C3%ADt%C3%A1sa',
+    contraindication: 'Ha a fej hátrafelé történő mozgatása fájdalommal jár, akkor csak az első félkört gyakoroljuk. Szédülés vagy nyakcsigolyapanaszok esetén ne gyakoroljuk.'
   },
   {
-    title: 'Viparitakarani Mudra - Váll-könyök állás',
+    title: 'Kerékpározás hanyatt fekvésben',
     type: 'asana',
     image: { src: 'viparitakarani_mudra.jpg', dir: 'r' },
     paragraphs: [
       {
-        c: 'Frissíti az egész szervezetet, harmonizálja a mirigyek működését. Hatásos stressz és depresszió ellen. Javítja a vénás és nyirokkeringést, segít lábduzzanatok és vénaproblémák esetén. Lazítja a medencetájék szerveit, egyben javítja a vérellátásukat. Hatékony alacsony vérnyomás esetén.',
+        c: 'Erősíti a has- és lábizomzatot. Javítja a csípőízület és a térd mozgathatóságát. Fokozza a vérkeringést, különösen a lábakban, hatásos visszerek kialakulása ellen. Lazítja a csípő-, térd- és lábízületet, javítja a vérellátásukat. Előkészíti a meditációs ülőhelyzetet.',
         nl: true
       },
       {
-        c: 'Nyugodjunk a testhelyzetben 2-5 percig.',
+        c: 'Végezd el változatonként 5-10-szer mindkét irányba.',
         nl: true
       }
     ],
-    src: 'https://www.yogaindailylife.org/system/hu/3-szint/viparitakarani-mudra',
-    contraindication: 'Magas vérnyomás vagy szédülékenység esetén a gyakorlat mellőzendő.'
+    src: 'https://www.yogaindailylife.org/system/hu/1-szint/sarva-hita-%C3%A1szan%C3%A1k-4-r%C3%A9sz/ker%C3%A9kp%C3%A1roz%C3%A1s-hanyatt-fekv%C3%A9sben',
+    contraindication: 'Ágyékcsigolya- panaszok esetén tegyük a kezünket a medencénk alá.'
   },
   {
-    title: 'Virasana - Hősi póz',
+    title: 'Pillangó',
     type: 'asana',
     image: { src: 'virasana.jpg', dir: 'l' },
     paragraphs: [
       {
-        c: 'Fejleszti az összpontosító képességet. Nyugtató hatású, oldja a szorongást. Segíti a lábboltozat természetes ívének kialakulását.',
+        c: 'Előkészíti a meditációs ülőhelyzetet. Lazítja a csípőízületet és javítja vérellátását.',
         nl: true
       },
       {
-        c: 'Mindkét oldalra végezd el 3-szor.',
+        c: 'Végezd kb. 1 percig.',
         nl: true
       }
     ],
-    src: 'https://www.yogaindailylife.org/system/hu/3-szint/virasana',
-    contraindication: 'Be nem gyógyult lábfejsérülés esetén a gyakorlat mellőzendő.'
+    src: 'https://www.yogaindailylife.org/system/hu/1-szint/sarva-hita-%C3%A1szan%C3%A1k-4-r%C3%A9sz/pillang%C3%B3'
   },
   {
-    title: 'Triyak Bhujangasana - Gerinccsavarás kobrában',
+    title: 'Térdhúzás a törzshöz',
     type: 'asana',
     image: { src: 'triyak_bhujangasana.jpg', dir: 't' },
     paragraphs: [
       {
-        c: 'Megőrzi a gerinc rugalmasságát és hajlékonyságát, fejleszti a hátizmokat, segít megelőzni a porckorongsérvet. Nagyon ajánlott azoknak, akik sok időt töltenek ülő helyzetben, jó székrekedés ellen. Harmonizálja a testet és az elmét, és ezt a kiegyensúlyozó hatást különösen a vese és a női szervek működésére fejti ki.',
+        c: 'Segít emésztési zavarok, felfúvódás és hátfájás esetén. Nyújtja az izmokat az ágyékcsigolyák és csípőízület környékén. Fejleszti a lábak stabilitását, az egyensúlyérzéket és az összpontosító képességet.',
         nl: true
       },
       {
-        c: 'Mindkét oldalra végezd el 3-szor.',
+        c: 'Mindkét lábbal végezd el 3-szor.',
         nl: true
       }
     ],
-    src: 'https://www.yogaindailylife.org/system/hu/4-szint/triyak-bhujangasana',
-    contraindication: 'Pajzsmirigy- túlműködés, lágyéksérv és heveny gerincbántalmak, valamint bélpanaszok esetén a gyakorlat mellőzendő.'
+    src: 'https://www.yogaindailylife.org/system/hu/1-szint/sarva-hita-%C3%A1szan%C3%A1k-3-r%C3%A9sz/t%C3%A9rdh%C3%BAz%C3%A1s-a-t%C3%B6rzsh%C3%B6z'
   },
   {
     title: 'Bari Khatu Pranam - Üdvözlet Khatunak',

@@ -1,5 +1,5 @@
 <div class="dialog-content" *ngIf="data.document">
-  <div class="dialog_header"  (click)="close()">
+  <div class="dialog_header">
     <h2 class="title">
       <span *ngIf="data.document.type === 'asana'">Gyakorlás: </span>
       <span *ngIf="data.document.type === 'lecture'">Tanítás: </span>
@@ -7,7 +7,7 @@
     </h2>
     <div class="day">{{ data.day }}</div>
   </div>
-  <div class="document-content"  (click)="close()">
+  <div class="document-content">
     <div class="image-container" *ngIf="data.document.image"
          [class.total]="data.document.image.dir === 't'"
          [class.left]="data.document.image.dir === 'l'"

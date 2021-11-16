@@ -154,15 +154,15 @@ $color_light_card: #ffffff;
   padding: 20px;
 }
 
-.box01, .box04, .box18, .box10, .box13, .box16, .box19, .box24 {
+.box04, .box18, .box13, .box16, .box09, .box23, .box05, .box17, .box08 {
   background: $color_light_gray;
 }
 
-.box02, .box05, .box08, .box11, .box14, .box17, .box20, .box23, .box09 {
+.box01, .box02, .box11, .box14, .box20, .box19, .box24 {
   background: $color_light_green;
 }
 
-.box03, .box06, .box22, .box12, .box15, .box07, .box21 {
+.box03, .box06, .box22, .box12, .box15, .box07, .box21, .box10 {
   background: $color_light_red;
   box-shadow: 2px 3px 3px rgb(0 0 0 / 20%);
   position: relative;

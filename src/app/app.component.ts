@@ -13,13 +13,13 @@ const QUOTE_INTERVAL = 10000;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  allEnabled = false;
+  allEnabled = true;
   randomQuotes: number[] = [0, 0, 0];
   quotes = GOLDEN_TEACHING;
 
   constructor(private readonly eventService: EventService,
               private readonly dialogService: DialogService) {
-    this.dialogService.openWelcome();
+    // this.dialogService.openWelcome();
     this.initQuotes();
     this.startQuoteInterval();
     this.startQuoteInterval(1, QUOTE_INTERVAL / 4);

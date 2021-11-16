@@ -175,7 +175,7 @@ export const ASANAS: DocumentModel[] = [
     contraindication: 'Nagyon magas vérnyomás és szédülés esetén a gyakorlatsor kerülendő.'
   },
   {
-    title: 'Nadi Shodhana Pranayama 3. szint',
+    title: 'Nadi Shodhana Pranayama 1. szint',
     type: 'asana',
     image: { src: 'nadi_sodhana.jpg', dir: 'r' },
     paragraphs: [
@@ -184,11 +184,11 @@ export const ASANAS: DocumentModel[] = [
         nl: true
       },
       {
-        c: 'Végezz 10 kört balról kezdve, majd 10 kört jobbról kezdve.',
+        c: 'Végezz 20 kört mindkét orrjáraton.',
         nl: true
       }
     ],
-    src: 'https://www.yogaindailylife.org/system/hu/3-szint/nadi-shodhana-pranayama-3-szint',
+    src: 'https://www.yogaindailylife.org/system/hu/1-szint/sarva-hita-%C3%A1szan%C3%A1k-1-r%C3%A9sz/nadi-shodhana-pranayama-1-szint',
     contraindication: 'Étkezés után nem javasolt. Mindig orron át történjen a légzés, erőlködés nélkül. Ha az orrjáratok blokkoltak (pl. nátha esetén), akkor végezhető mentálisan.'
   },
   {

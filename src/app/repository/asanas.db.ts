@@ -152,7 +152,7 @@ export const ASANAS: DocumentModel[] = [
     contraindication: 'Pajzsmirigy- túlműködés, lágyéksérv és heveny gerincbántalmak, valamint bélpanaszok esetén a gyakorlat mellőzendő.'
   },
   {
-    title: 'Khatu Pranam - Üdvözlet Khatunak',
+    title: 'Bari Khatu Pranam - Üdvözlet Khatunak',
     type: 'asana',
     image: { src: 'khatu_pranam.jpg', dir: 'l' },
     paragraphs: [
@@ -173,7 +173,7 @@ export const ASANAS: DocumentModel[] = [
         nl: true
       }
     ],
-    src: 'https://www.yogaindailylife.org/system/hu/7-szint/khatu-pranam',
+    src: 'https://www.youtube.com/watch?v=54fen_fbdPw',
     contraindication: 'Nagyon magas vérnyomás és szédülés esetén a gyakorlatsor kerülendő.'
   },
   {
@@ -209,7 +209,7 @@ export const ASANAS: DocumentModel[] = [
     src: 'https://www.yogaindailylife.org/system/hu/gyakorlatszintek/laz%C3%ADt%C3%A1s'
   },
   {
-    title: 'Önvizsgálati meditáció',
+    title: 'Meditáció Vishwagurujival',
     type: 'asana',
     paragraphs: [
       {
@@ -219,12 +219,8 @@ export const ASANAS: DocumentModel[] = [
       {
         c: 'Az önvizsgálati meditáció a „Milyen vagyok?” kérdéssel kezdődik, hogy végül megtaláljuk a választ létünk legalapvetőbb kérdésére: „Ki vagyok én?”',
         nl: true
-      },
-      {
-        c: 'Egy általad kiválasztott szinten végezz 10-15 perc meditációt.',
-        nl: true
       }
     ],
-    src: 'https://www.yogaindailylife.org/system/hu/%C3%B6nvizsg%C3%A1lati-medit%C3%A1ci%C3%B3'
+    src: 'https://www.youtube.com/watch?v=xGDne-Y_6cU&list=PLF0AB27064ECC0BD8&index=14'
   },
 ];

@@ -36,6 +36,7 @@ export const STORIES: DocumentModel[] = [
     title: 'A tolvaj',
     type: 'lecture',
     src: 'https://youtu.be/a-_ZgzNNZcE',
+    image: { src: 'tolvaj.jpg', dir: 'l' },
     paragraphs: [
       {
         c: 'Volt egyszer egy nagy falu, és mint minden nagyobb falunak, ennek is volt egy uralkodója. Az egyik éjjel valaki besurrant az uralkodó házába és elvitt egy értékes tárgyat. Az uralkodó tudta, hogy a tolvajnak falubelinek kell lennie. Megkérdezte népét, hogy ki volt az, de senki sem állt elő.  ',
@@ -94,8 +95,8 @@ export const STORIES: DocumentModel[] = [
   {
     title: 'A két testvér',
     type: 'lecture',
-    image: { src: 'ket_testver.jpg', dir: 'l' },
     src: 'https://www.youtube.com/watch?v=cecDolzZQ4Q',
+    image: { src: 'cow.jpg', dir: 'l' },
     paragraphs: [
       {
         c: 'Élt egyszer egy testvérpár. Az egyik nagyon szerény, ártatlan volt, de nem túl okos. Szívében sosem született rossz gondolat. A másik ezzel szemben nagyon okos és ravasz volt, mindig a saját érdekét nézte. A szüleik eltávoztak, és úgy végrendelkeztek, hogy a testvéreknek mindent fele-fele arányban kell elosztani. ',
@@ -286,6 +287,7 @@ export const STORIES: DocumentModel[] = [
     title: 'A krokodilok',
     type: 'lecture',
     src: 'https://youtu.be/H7RuQ5HOiZ4',
+    image: { src: 'croc.jpg', dir: 'l' },
     paragraphs: [
       {
         c: 'Volt egyszer egy nagy hajó, ami embereket és állatokat szállított a kontinensek között. Két nagy medence volt rajta. Az egyik indiai, a másik ausztráliai krokodiloknak. Az indiai krokodilok medencéjének a tetejére egy nagy fém rácsot helyeztek, az ausztrál krokodilok medencéjének a teteje fedetlen volt. ',
@@ -321,6 +323,7 @@ export const STORIES: DocumentModel[] = [
     title: 'A teve és a róka',
     type: 'lecture',
     src: 'https://youtu.be/RmffYAPELwI',
+    image: { src: 'fox.jpg', dir: 'l' },
     paragraphs: [
       {
         c: 'Élt egy teve és egy róka, akik nagyon jó barátok voltak, mindig együtt szórakoztak és együtt jártak élelmet keresni.',
@@ -451,6 +454,7 @@ export const STORIES: DocumentModel[] = [
   {
     title: 'Semmi sem tart örökké',
     type: 'lecture',
+    image: { src: 'ring.jpg', dir: 'l' },
     paragraphs: [
       {
         c: 'Élt egyszer egy öreg király és egy öreg királyné. Amikor úgy érezték, eljött az idő, hogy letegyék az uralkodás terhét és elmenjenek az erdőbe meditálni, akkor hívatták a trónörököst, egyetlen fiukat, és elbúcsúztak tőle. Az ifjú azt mondta, nem érzi még magát alkalmasnak az uralkodásra. Félve kérdezte szüleit, mit tegyen, ha a tanácsukra lenne szüksége.',
@@ -533,6 +537,7 @@ export const STORIES: DocumentModel[] = [
   {
     title: 'A két testvér története',
     type: 'lecture',
+    image: { src: 'ket_testver.jpg', dir: 'l' },
     paragraphs: [
       {
         c: 'Élt egyszer réges-régen Indiában két testvérpár. Mindketten érdeklődtek a lelki élet iránt, és úgy alakult, hogy szerzetesek lettek. De az élet messzire sodorta őket egymástól.',

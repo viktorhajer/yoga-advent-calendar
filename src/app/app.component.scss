@@ -3,6 +3,8 @@ $color_light_green: #24535b;
 $color_light_red: #ee7266;
 $color_light_main: #000000;
 $color_light_card: #ffffff;
+$container_width: 1050px;
+$box_width: calc($container_width / 7);
 
 @keyframes activeBox {
   0% {
@@ -33,8 +35,8 @@ $color_light_card: #ffffff;
 }
 
 .box_container {
-  width: 1148px;
-  height: 821px;
+  width: $container_width;
+  height: calc($box_width * 5);
   overflow: hidden;
   padding: 10px;
   background: $color_light_card;
@@ -44,8 +46,8 @@ $color_light_card: #ffffff;
 
 .box {
   float: left;
-  width: 164px;
-  height: 164px;
+  width: $box_width;
+  height: $box_width;
   background: red;
   display: flex;
   align-items: center;
@@ -99,8 +101,8 @@ $color_light_card: #ffffff;
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  width: 308px;
-  height: 308px;
+  width: calc($box_width * 2 - 20px);
+  height: calc($box_width * 2 - 20px);
   background: $color_light_main;
   text-transform: uppercase;
   font-size: 22px;
@@ -131,8 +133,8 @@ $color_light_card: #ffffff;
   display: flex;
   flex-flow: column;
   justify-content: center;
-  width: 288px;
-  height: 124px;
+  width: calc($box_width * 2 - 40px);
+  height: calc($box_width - 40px);
   background: $color_light_card;
   padding: 20px;
   box-shadow: 2px 3px 3px rgb(0 0 0 / 20%);
@@ -141,9 +143,8 @@ $color_light_card: #ffffff;
 }
 
 .big {
-  width: 288px;
-  height: 124px;
-  padding: 20px;
+  width: calc($box_width * 2);
+  height: $box_width;
 }
 
 .box04, .box18, .box13, .box16, .box09, .box23, .box05, .box17, .box08 {

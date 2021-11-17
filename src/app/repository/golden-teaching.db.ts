@@ -38,7 +38,7 @@ export const GOLDEN_TEACHING: QuoteModel[] = [
   {content: 'Tégy meg mindent az erkölcsi eszmények megvalósulásáért. Ez hozzájárul a lét harmóniájához.'},
   {content: 'Tanulj meg uralkodni érzékeiden. Ne engedd át magad vágyaidnak, ne hagyd, hogy függésben tartsanak.'},
   {content: 'A tunyaság az ember egyik legnagyobb ellensége. Erőfeszítés nélkül nem érhetsz célt. Küzd le lustaságodat.'},
-  {content: 'Ne vesztegesd életedet élvezetek hajszolására. Ne engedd, hogy szenvedélyek rabja légy. Miként a méhecske megrészegül a lótuszvirág csábos illatától, és alkonyatkor szirmait összezáró virág foglya marad, úgy pazarolható el az élet a futó érzéki élvezetek kergetésében. Légy kitartó a spirituális tudás kutatásában, és tudatod fejlesztésében.'},
+  {content: 'Ne vesztegesd életedet élvezetek hajszolására. Miként a méhecske megrészegül a lótuszvirág csábos illatától, és alkonyatkor szirmait összezáró virág foglya marad, úgy pazarolható el az élet a futó érzéki élvezetek kergetésében. Légy kitartó a spirituális tudás kutatásában, és tudatod fejlesztésében.'},
   {content: 'Ne vedd semmibe a természet törvényeit. Ha a természet ellen teszel, el kell viselned következményeit.'},
   {content: 'Amikor vihar van a hullámok magasra csapnak, ne akkor merülj az igazgyöngyért a tenger mélyére.'},
   {content: 'Példát a szentekről és nagy személyiségekről végy. Amit valaki elér, csakis saját erőfeszítésének köszönheti.'},

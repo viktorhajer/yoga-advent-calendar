@@ -3,7 +3,6 @@ export class DocumentModel {
   type ? = '';
   src ? = '';
   image ?: { src: string, dir: string };
-  paragraphs?: { c: string, nl: boolean }[] = [];
-  moreInfo?: string[] = [];
+  content?: string = '';
   contraindication ? = '';
 }

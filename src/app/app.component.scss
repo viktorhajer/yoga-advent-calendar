@@ -1,10 +1,4 @@
-$color_light_gray: #d0ddcc;
-$color_light_green: #24535b;
-$color_light_red: #ee7266;
-$color_light_main: #000000;
-$color_light_card: #ffffff;
-$container_width: 1050px;
-$box_width: calc($container_width / 7);
+@import '../styles';
 
 @keyframes activeBox {
   0% {

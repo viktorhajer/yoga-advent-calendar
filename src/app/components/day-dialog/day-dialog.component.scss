@@ -1,5 +1,3 @@
-$color_light_red: #ee7266;
-
 .dialog_header {
   display: flex;
   align-items: flex-start;
@@ -53,7 +51,7 @@ $color_light_red: #ee7266;
       }
 
       &.contraindication {
-        color: $color_light_red;
+        color: #ee7266;
       }
     }
   }

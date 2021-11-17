@@ -16,28 +16,20 @@ $color_light_card: #ffffff;
   }
 }
 
-.header {
-  background: #ffffff;
-  color: $color_light_red;
-  padding: 20px;
-  font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  border-bottom: 2px solid #ddd;
-  opacity: 0;
-}
-
 .copyright {
   text-align: center;
   margin-top: 13px;
   font-size: 10px;
   color: #2f2f2f;
+  margin-bottom: 0;
 }
 
 .content {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-flow: column;
+  height: 100%;
 }
 
 .box_container {

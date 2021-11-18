@@ -6,8 +6,8 @@ import {DialogService} from './services/dialog.service';
 import {GOD_MODE} from './app.constant';
 import {ThemeService} from './services/theme.service';
 
-const WINDOW_MIN_WIDTH = 1100;
-const WINDOW_MIN_HEIGHT = 830;
+const WINDOW_MIN_WIDTH = 1010;
+const WINDOW_MIN_HEIGHT = 760;
 const QUOTE_INTERVAL = 10000;
 
 @Component({

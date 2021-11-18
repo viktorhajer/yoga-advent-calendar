@@ -18,7 +18,7 @@
   --color_copyright: #d6d6d6;
   --color_not_supported_text: #ffffff;
 
-  --container_width: 1050px;
+  --container_width: 980px;
   --box_width: calc(var(--container_width) / 7);
 }
 
@@ -46,7 +46,10 @@ body {
   color: #ee7266;
 }
 
-@media (max-width: 1024px) {
+.day-modal {
+  width: 900px;
+}
+@media (max-width: 900px) {
   .day-modal {
     max-width: unset !important;
     width: 100%;

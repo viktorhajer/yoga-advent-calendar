@@ -1,12 +1,12 @@
 import {Injectable} from '@angular/core';
-import {jeans, xmas, Theme, sunny} from '../models/theme.model';
+import {jeans, xmas, Theme, elegant, leaf} from '../models/theme.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ThemeService {
   private currentIndex = 0;
-  private availableThemes: Theme[] = [xmas, jeans, sunny];
+  private availableThemes: Theme[] = [xmas, jeans, elegant, leaf];
   private active: Theme = this.availableThemes[0];
 
   toggleTheme() {

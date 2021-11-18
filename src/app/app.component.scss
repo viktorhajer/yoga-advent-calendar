@@ -67,7 +67,7 @@
 }
 
 .box:not(.inactive):hover {
-  background: #000000;
+  background: var(--color_day_active_bg);
   font-size: 50px;
 }
 
@@ -102,6 +102,7 @@
   color: var(--color_main_text);
 
   img {
+    filter: var(--main_img_filter);
     width: 75%;
     height: 75%;
   }

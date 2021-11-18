@@ -26,12 +26,14 @@ export class AppComponent {
   constructor(private readonly eventService: EventService,
               private readonly themeService: ThemeService,
               private readonly dialogService: DialogService) {
-    this.dialogService.openWelcome();
     this.initQuotes();
     this.initSupported();
     this.startQuoteInterval();
     this.startQuoteInterval(1, QUOTE_INTERVAL / 4);
     this.startQuoteInterval(2, QUOTE_INTERVAL / 2);
+    if (this.supported && false) {
+      this.dialogService.openWelcome();
+    }
   }
 
   @HostListener('window:resize', ['$event'])

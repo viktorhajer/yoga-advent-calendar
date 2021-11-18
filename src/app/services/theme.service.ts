@@ -1,36 +1,22 @@
 import {Injectable} from '@angular/core';
-import {dark, light, Theme} from '../models/theme.model';
+import {jeans, xmas, Theme, sunny} from '../models/theme.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ThemeService {
-  private active: Theme = light;
-  private availableThemes: Theme[] = [light, dark];
+  private currentIndex = 0;
+  private availableThemes: Theme[] = [xmas, jeans, sunny];
+  private active: Theme = this.availableThemes[0];
 
-  getAvailableThemes(): Theme[] {
-    return this.availableThemes;
-  }
-
-  getActiveTheme(): Theme {
-    return this.active;
-  }
-
-  isDarkTheme(): boolean {
-    return this.active.name === dark.name;
-  }
-
-  setDarkTheme(): void {
-    this.setActiveTheme(dark);
-  }
-
-  setLightTheme(): void {
-    this.setActiveTheme(light);
+  toggleTheme() {
+    this.currentIndex++;
+    this.currentIndex = this.currentIndex % this.availableThemes.length;
+    this.setActiveTheme(this.availableThemes[this.currentIndex]);
   }
 
   setActiveTheme(theme: Theme): void {
     this.active = theme;
-
     Object.keys(this.active.properties).forEach(property => {
       document.documentElement.style.setProperty(
         property,

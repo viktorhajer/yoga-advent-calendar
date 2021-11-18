@@ -1,12 +1,12 @@
 @keyframes activeBox {
   0% {
-    background-color: #000000;
+    background-color: var(--color_day_anim_bg1);
   }
   50% {
-    background-color: #1a3b43;
+    background-color: var(--color_day_anim_bg2);
   }
   100% {
-    background-color: #000000;
+    background-color: var(--color_day_anim_bg1);
   }
 }
 
@@ -52,20 +52,14 @@
   transition: 0.2s ease-in-out;
   position: relative;
 
-  &.inactive {
-    filter: blur(2px) sepia(0.3) grayscale(0.2);
-    opacity: 0.8;
-    cursor: auto;
-  }
-
-  &.inactive:hover {
+  &.inactive, &.inactive:hover {
     filter: blur(2px) sepia(0.3) grayscale(0.2);
     opacity: 0.8;
     cursor: auto;
   }
 
   &.active {
-    color: var(--color_primary);
+    color: var(--color_day_anim_text);
     animation-name: activeBox;
     animation-duration: 800ms;
     animation-iteration-count: infinite;
@@ -113,7 +107,7 @@
   }
 
   p {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 21px;
   }

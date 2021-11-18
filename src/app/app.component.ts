@@ -26,7 +26,7 @@ export class AppComponent {
   constructor(private readonly eventService: EventService,
               private readonly themeService: ThemeService,
               private readonly dialogService: DialogService) {
-    // this.dialogService.openWelcome();
+    this.dialogService.openWelcome();
     this.initQuotes();
     this.initSupported();
     this.startQuoteInterval();
@@ -60,18 +60,14 @@ export class AppComponent {
 
   isActive(day: number): boolean {
     const now = new Date();
-    return 2021 === now.getFullYear() && (GOD_MODE ? 10 : 11) === now.getMonth() && day === now.getDate() ;
+    return 2021 === now.getFullYear() && (GOD_MODE ? 10 : 11) === now.getMonth() && day === now.getDate();
   }
 
   toggleTheme() {
-    if (this.themeService.isDarkTheme()) {
-      this.themeService.setLightTheme();
-    } else {
-      this.themeService.setDarkTheme();
-    }
+    this.themeService.toggleTheme();
   }
 
-  toggleEnable(){
+  toggleEnable() {
     if (GOD_MODE) {
       this.allEnabled = !this.allEnabled;
     }

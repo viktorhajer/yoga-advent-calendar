@@ -31,7 +31,7 @@
   height: calc(var(--box_width) * 5);
   overflow: hidden;
   padding: 10px;
-  background: var(--color_card_bg);
+  background: var(--color_container_bg);
   box-shadow: 4px 4px 3px rgb(0 0 0 / 10%);
   border: 1px solid rgb(0 0 0 / 20%);
 }
@@ -40,13 +40,12 @@
   float: left;
   width: var(--box_width);
   height: var(--box_width);
-  background: red;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 34px;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--color_day_text);
   cursor: pointer;
   text-shadow: 5px 5px 3px rgb(0 0 0 / 15%);
   user-select: none;

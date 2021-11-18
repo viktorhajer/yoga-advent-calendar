@@ -16,7 +16,7 @@
   text-align: center;
   margin-top: 13px;
   font-size: 10px;
-  color: #2f2f2f;
+  color: #d6d6d6;
   margin-bottom: 0;
 }
 
@@ -109,6 +109,7 @@
   text-shadow: none;
   box-shadow: 6px 6px 7px rgb(0 0 0 / 20%);
   position: relative;
+  color: $color_light_red;
 
   img {
     width: 75%;
@@ -154,4 +155,9 @@
   box-shadow: 2px 3px 3px rgb(0 0 0 / 20%);
   position: relative;
   z-index: 1;
+}
+
+.not-supported {
+  padding: 20px;
+  color: #ffffff;
 }

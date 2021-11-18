@@ -1,5 +1,5 @@
 <div class="content">
-  <div class="box_container">
+  <div class="box_container" *ngIf="supported">
     <div class="main" (click)="initQuotes()">
       <img src="assets/om.jpg"/>
       <p (click)="toggleEnable()">Békés Adventi Heteket kíván a Jóga a Mindennapi Életben Egyesület!</p>
@@ -38,5 +38,11 @@
     </div>
     <div class="box box24 big" [class.active]="isActive(24)" [class.inactive]="isInactive(24)" (click)="openDay(24)">24</div>
   </div>
-  <p class="copyright">Jóga a mindennapi életben © 1998-2021 Minden jog fenntartva.</p>
+  <p class="copyright" *ngIf="supported">Jóga a mindennapi életben © 1998-2021 Minden jog fenntartva.</p>
+
+  <div class="not-supported" *ngIf="!supported">
+    <h1>Nem támogatott eszköz!</h1>
+    Az oldal által támogatott minimális felbontás {{ minWidth }}x{{ minHeight }}.
+    <br> Kérem, próbálja megnyitni az oldalt asztali számítógépen.
+  </div>
 </div>

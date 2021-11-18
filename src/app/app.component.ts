@@ -1,10 +1,12 @@
-import {Component} from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import {EventService} from './services/event.service';
 import {QuoteModel} from './models/quote.model';
 import {GOLDEN_TEACHING} from './repository/golden-teaching.db';
 import {DialogService} from './services/dialog.service';
 import {GOD_MODE} from './app.constant';
 
+const WINDOW_MIN_WIDTH = 1100;
+const WINDOW_MIN_HEIGHT = 830;
 const QUOTE_INTERVAL = 10000;
 
 @Component({
@@ -16,14 +18,23 @@ export class AppComponent {
   allEnabled = true;
   randomQuotes: number[] = [0, 0, 0];
   quotes = GOLDEN_TEACHING;
+  supported = true;
+  minWidth = WINDOW_MIN_WIDTH;
+  minHeight = WINDOW_MIN_HEIGHT;
 
   constructor(private readonly eventService: EventService,
               private readonly dialogService: DialogService) {
     // this.dialogService.openWelcome();
     this.initQuotes();
+    this.initSupported();
     this.startQuoteInterval();
     this.startQuoteInterval(1, QUOTE_INTERVAL / 4);
     this.startQuoteInterval(2, QUOTE_INTERVAL / 2);
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.initSupported();
   }
 
   initQuotes() {
@@ -54,6 +65,10 @@ export class AppComponent {
     if (GOD_MODE) {
       this.allEnabled = !this.allEnabled;
     }
+  }
+
+  initSupported() {
+    this.supported = window.innerWidth >= WINDOW_MIN_WIDTH && window.innerHeight >= WINDOW_MIN_HEIGHT;
   }
 
   private startQuoteInterval(index = 0, delay = 0) {

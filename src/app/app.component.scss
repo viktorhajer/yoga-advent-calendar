@@ -1,5 +1,3 @@
-@import '../styles';
-
 @keyframes activeBox {
   0% {
     background-color: #000000;
@@ -16,7 +14,7 @@
   text-align: center;
   margin-top: 13px;
   font-size: 10px;
-  color: #d6d6d6;
+  color: var(--color_copyright);
   margin-bottom: 0;
 }
 
@@ -29,19 +27,19 @@
 }
 
 .box_container {
-  width: $container_width;
-  height: calc($box_width * 5);
+  width: var(--container_width);
+  height: calc(var(--box_width) * 5);
   overflow: hidden;
   padding: 10px;
-  background: $color_light_card;
+  background: var(--color_card_bg);
   box-shadow: 4px 4px 3px rgb(0 0 0 / 10%);
   border: 1px solid rgb(0 0 0 / 20%);
 }
 
 .box {
   float: left;
-  width: $box_width;
-  height: $box_width;
+  width: var(--box_width);
+  height: var(--box_width);
   background: red;
   display: flex;
   align-items: center;
@@ -68,7 +66,7 @@
   }
 
   &.active {
-    color: $color_light_red;
+    color: var(--color_primary);
     animation-name: activeBox;
     animation-duration: 800ms;
     animation-iteration-count: infinite;
@@ -95,13 +93,12 @@
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  width: calc($box_width * 2 - 20px);
-  height: calc($box_width * 2 - 20px);
-  background: $color_light_main;
+  width: calc(var(--box_width) * 2 - 20px);
+  height: calc(var(--box_width) * 2 - 20px);
+  background: var(--color_main_bg);
   text-transform: uppercase;
   font-size: 22px;
   font-weight: bold;
-  color: #ffffff;
   cursor: pointer;
   text-align: center;
   line-height: 30px;
@@ -109,7 +106,7 @@
   text-shadow: none;
   box-shadow: 6px 6px 7px rgb(0 0 0 / 20%);
   position: relative;
-  color: $color_light_red;
+  color: var(--color_main_text);
 
   img {
     width: 75%;
@@ -128,9 +125,9 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
-  width: calc($box_width * 2 - 40px);
-  height: calc($box_width - 40px);
-  background: $color_light_card;
+  width: calc(var(--box_width) * 2 - 40px);
+  height: calc(var(--box_width) - 40px);
+  background: var(--color_card_bg);
   padding: 20px;
   box-shadow: 2px 3px 3px rgb(0 0 0 / 20%);
   position: relative;
@@ -138,20 +135,20 @@
 }
 
 .big {
-  width: calc($box_width * 2);
-  height: $box_width;
+  width: calc(var(--box_width) * 2);
+  height: var(--box_width);
 }
 
 .box04, .box18, .box13, .box16, .box09, .box23, .box05, .box17, .box08 {
-  background: $color_light_gray;
+  background: var(--color_accent);
 }
 
 .box01, .box02, .box11, .box14, .box20, .box19, .box24 {
-  background: $color_light_green;
+  background: var(--color_secondary);
 }
 
 .box03, .box06, .box22, .box12, .box15, .box07, .box21, .box10 {
-  background: $color_light_red;
+  background: var(--color_primary);
   box-shadow: 2px 3px 3px rgb(0 0 0 / 20%);
   position: relative;
   z-index: 1;
@@ -159,5 +156,5 @@
 
 .not-supported {
   padding: 20px;
-  color: #ffffff;
+  color: var(--color_not_supported_text);
 }

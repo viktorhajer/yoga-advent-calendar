@@ -1,7 +1,4 @@
-@import '../../../styles';
-
 .quote-container {
-  color: #000000;
   font-size: 12px;
   font-weight: normal;
   font-style: italic;
@@ -14,14 +11,13 @@
   p {
     width: 100%;
     margin: 0;
-    color: $color_light_red;
+    color: var(--color_card_text);
 
     &.author {
       text-align: right;
       margin-top: 12px;
       padding-top: 4px;
-      border-top: 2px dotted rgb(0 0 0 / 5%);
-      color: rgb(0 0 0 / 50%);
+      border-top: 2px dotted var(--color_card_text);
       font-weight: bold;
     }
   }

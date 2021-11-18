@@ -1,16 +1,15 @@
-@import '../../../styles';
-
 .dialog-content {
   text-align: center;
   width: 650px;
 
   h1 {
-    color: $color_light_red;
+    color: var(--color_primary);
   }
 
   p {
     font-style: italic;
     margin: 30px;
+    color: var(--color_box_text);
   }
 
   div {

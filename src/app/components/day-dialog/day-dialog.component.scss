@@ -12,6 +12,7 @@
 
 .dialog-content {
   width: 800px;
+  color: var(--color_box_text);
 
   .image-container {
     margin: 0 15px 5px 0;
@@ -49,13 +50,13 @@
   }
 
   .src-container {
-    border-top: 1px dotted lightgray;
+    border-top: 1px dotted var(--color_box_src_border);
     padding-top: 6px;
 
     a {
       font-size: 12px;
       text-decoration: none;
-      color: #000;
+      color: var(--color_box_src_text);
       outline: none;
     }
   }

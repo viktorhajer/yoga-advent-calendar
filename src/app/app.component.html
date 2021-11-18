@@ -38,7 +38,9 @@
     </div>
     <div class="box box24 big" [class.active]="isActive(24)" [class.inactive]="isInactive(24)" (click)="openDay(24)">24</div>
   </div>
-  <p class="copyright" *ngIf="supported">Jóga a mindennapi életben © 1998-2021 Minden jog fenntartva.</p>
+  <p class="copyright" *ngIf="supported">
+    Jóga a mindennapi életben <span (click)="toggleTheme()">©</span> 1998-2021 Minden jog fenntartva.
+  </p>
 
   <div class="not-supported" *ngIf="!supported">
     <h1>Nem támogatott eszköz!</h1>

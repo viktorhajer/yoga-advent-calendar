@@ -4,6 +4,7 @@ import {QuoteModel} from './models/quote.model';
 import {GOLDEN_TEACHING} from './repository/golden-teaching.db';
 import {DialogService} from './services/dialog.service';
 import {GOD_MODE} from './app.constant';
+import {ThemeService} from './services/theme.service';
 
 const WINDOW_MIN_WIDTH = 1100;
 const WINDOW_MIN_HEIGHT = 830;
@@ -23,6 +24,7 @@ export class AppComponent {
   minHeight = WINDOW_MIN_HEIGHT;
 
   constructor(private readonly eventService: EventService,
+              private readonly themeService: ThemeService,
               private readonly dialogService: DialogService) {
     // this.dialogService.openWelcome();
     this.initQuotes();
@@ -59,6 +61,14 @@ export class AppComponent {
   isActive(day: number): boolean {
     const now = new Date();
     return 2021 === now.getFullYear() && (GOD_MODE ? 10 : 11) === now.getMonth() && day === now.getDate() ;
+  }
+
+  toggleTheme() {
+    if (this.themeService.isDarkTheme()) {
+      this.themeService.setLightTheme();
+    } else {
+      this.themeService.setDarkTheme();
+    }
   }
 
   toggleEnable(){

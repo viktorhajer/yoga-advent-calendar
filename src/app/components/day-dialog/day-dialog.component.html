@@ -1,11 +1,12 @@
 <div class="dialog-content" *ngIf="data.document">
   <div class="dialog_header">
     <h2 class="title">
+      <span class="day">{{ data.day }}.&nbsp;</span>
       <span *ngIf="data.document.type === 'asana'">Gyakorlás: </span>
       <span *ngIf="data.document.type === 'lecture'">Tanítás: </span>
       {{ data.document.title }}
     </h2>
-    <div class="day">{{ data.day }}</div>
+    <div class="close" (click)="close()">&#10006;</div>
   </div>
   <div class="document-content">
     <div class="image-container" *ngIf="data.document.image"

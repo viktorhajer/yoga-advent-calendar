@@ -17,6 +17,7 @@ export class DialogService {
     const document = CALENDAR[day - 1];
     this.dialog.open(DayDialogComponent, {
       disableClose: false,
+      panelClass: 'day-modal',
       data: {day, document}
     });
   }

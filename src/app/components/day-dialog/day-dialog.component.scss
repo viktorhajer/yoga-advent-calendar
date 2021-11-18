@@ -4,14 +4,14 @@
   justify-content: space-between;
   margin-bottom: 15px;
 
-  .day {
-    font-size: 27px;
+  .close {
+    font-size: 18px;
     font-weight: bold;
+    cursor: pointer;
   }
 }
 
 .dialog-content {
-  width: 800px;
   color: var(--color_box_text);
 
   .image-container {
@@ -58,6 +58,30 @@
       text-decoration: none;
       color: var(--color_box_src_text);
       outline: none;
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .dialog-content {
+    .image-container {
+      &.total {
+        width: 100%;
+        height: auto;
+        float: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .dialog-content {
+    .image-container {
+      &.left, &.right {
+        width: 100%;
+        height: auto;
+        float: none;
+      }
     }
   }
 }

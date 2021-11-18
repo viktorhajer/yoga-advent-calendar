@@ -4,5 +4,4 @@ export class DocumentModel {
   src ? = '';
   image ?: { src: string, dir: string };
   content?: string = '';
-  contraindication ? = '';
 }

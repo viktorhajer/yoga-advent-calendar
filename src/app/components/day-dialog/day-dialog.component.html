@@ -14,10 +14,7 @@
          [class.right]="data.document.image.dir === 'r'">
       <img src="assets/images/{{data.document.image.src}}" />
     </div>
-    <p *ngIf="data.document.content" [innerHTML]="data.document.content"></p>
-    <p class="contraindication" *ngIf="data.document.contraindication">
-      Vigyázat!!! {{ data.document.contraindication }}
-    </p>
+    <div *ngIf="data.document.content" [innerHTML]="data.document.content"></div>
   </div>
   <div class="src-container" *ngIf="data.document.src">
     <a target="_blank" [href]="data.document.src | safeUrl ">

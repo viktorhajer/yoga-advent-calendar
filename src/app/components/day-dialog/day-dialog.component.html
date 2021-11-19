@@ -7,8 +7,11 @@
       {{ data.document.title }}
     </h2>
     <div class="actions">
-      <mat-icon *ngIf="hasNavigator" class="copy" (click)="copyUrl()">link</mat-icon>
-      <mat-icon class="close" (click)="close()">close</mat-icon>
+      <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{getEncodedURL()}}&amp;src=sdkpreparse">
+        <mat-icon *ngIf="hasNavigator" matTooltip="Megosztás Facebook-on">share</mat-icon>
+      </a>
+      <mat-icon *ngIf="hasNavigator" class="copy" (click)="copyUrl()" matTooltip="Hivatkozás másolása">link</mat-icon>
+      <mat-icon class="close" (click)="close()" matTooltip="Bezárás">close</mat-icon>
     </div>
   </div>
   <div class="document-content">

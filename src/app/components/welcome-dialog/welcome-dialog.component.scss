@@ -3,10 +3,12 @@
   width: 650px;
 
   .close {
-    font-size: 18px;
-    font-weight: bold;
     cursor: pointer;
+    opacity: 0.5;
     float: right;
+  }
+  .close:hover {
+    opacity: 1;
   }
 
   h1 {

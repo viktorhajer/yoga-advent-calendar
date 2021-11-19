@@ -5,10 +5,18 @@
   margin-bottom: 15px;
 
   .actions {
-    width: 55px;
+    width: 95px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    a {
+      display: flex;
+      align-items: center;
+      color: var(--color_box_text);
+      text-decoration: none;
+      outline: none;
+    }
 
     mat-icon {
       cursor: pointer;

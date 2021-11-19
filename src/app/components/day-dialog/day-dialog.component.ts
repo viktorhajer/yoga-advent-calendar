@@ -16,14 +16,21 @@ export class DayDialogComponent {
               public data: { day: number, document: DocumentModel }) {
   }
 
+  getEncodedURL(): string {
+    return encodeURIComponent(this.getURL())
+  }
+
   copyUrl() {
     if (this.hasNavigator) {
-      const url = window.location.origin + window.location.pathname + '?day=' + this.data.day;
-      navigator.clipboard.writeText(url);
+      navigator.clipboard.writeText(this.getURL());
     }
   }
 
   close() {
     this.dialogRef.close();
+  }
+
+  private getURL(): string {
+    return window.location.origin + window.location.pathname + '?day=' + this.data.day;
   }
 }

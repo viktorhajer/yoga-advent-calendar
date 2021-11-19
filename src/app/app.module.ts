@@ -10,6 +10,7 @@ import {QuoteComponent} from './components/quote/quote.component';
 import {WelcomeDialogComponent} from './components/welcome-dialog/welcome-dialog.component';
 import {RouterModule} from '@angular/router';
 import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {MatIconModule} from '@angular/material/icon';
     BrowserModule,
     MatDialogModule,
     MatIconModule,
+    MatTooltipModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([{
       path: '**',

@@ -5,6 +5,9 @@ import {GOLDEN_TEACHING} from './repository/golden-teaching.db';
 import {DialogService} from './services/dialog.service';
 import {GOD_MODE} from './app.constant';
 import {ThemeService} from './services/theme.service';
+import {DocumentModel} from './models/document.model';
+import {CALENDAR} from './repository/advent-calendar.db';
+import {ActivatedRoute, Params} from '@angular/router';
 
 const WINDOW_MIN_WIDTH = 1010;
 const WINDOW_MIN_HEIGHT = 760;
@@ -22,8 +25,11 @@ export class AppComponent {
   supported = true;
   minWidth = WINDOW_MIN_WIDTH;
   minHeight = WINDOW_MIN_HEIGHT;
+  days = [1, 6, 18, 20, 23, 15, 17, 21, 0, 7, 8, -1, 19, 9, 10, 13, 2, 3, 11, 4, 12, 5, 14, 22, 16, -2, 24];
+  displayBoxTitle = true;
 
   constructor(private readonly eventService: EventService,
+              private readonly activatedRoute: ActivatedRoute,
               private readonly themeService: ThemeService,
               private readonly dialogService: DialogService) {
     this.initQuotes();
@@ -34,6 +40,12 @@ export class AppComponent {
     if (this.supported && false) {
       this.dialogService.openWelcome();
     }
+    this.activatedRoute.queryParams.subscribe(params => {
+      const day = params['day'];
+      if (day && Number(day) <= 24 && Number(day) > 0) {
+        this.openDay(day);
+      }
+    });
   }
 
   @HostListener('window:resize', ['$event'])
@@ -51,6 +63,10 @@ export class AppComponent {
     }
   }
 
+  getDay(day: number): DocumentModel {
+    return CALENDAR[day - 1];
+  }
+
   getQuote(quote = 0): QuoteModel {
     return this.quotes[quote];
   }
@@ -60,7 +76,7 @@ export class AppComponent {
     return 2021 === now.getFullYear() && (11 === now.getMonth() && day > now.getDate()) || (11 > now.getMonth()) && !this.allEnabled;
   }
 
-  isActive(day: number): boolean {
+  isCurrentDay(day: number): boolean {
     const now = new Date();
     return 2021 === now.getFullYear() && (GOD_MODE ? 10 : 11) === now.getMonth() && day === now.getDate();
   }

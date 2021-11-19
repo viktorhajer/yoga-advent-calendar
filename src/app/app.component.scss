@@ -64,6 +64,20 @@
     animation-duration: 800ms;
     animation-iteration-count: infinite;
   }
+
+  .box_title {
+    position: absolute;
+    bottom: 1px;
+    font-size: 11px;
+    width: calc(100% - 20px);
+    padding: 0px 10px;
+    font-weight: normal;
+    text-shadow: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+  }
 }
 
 .box:not(.inactive):hover {
@@ -133,19 +147,21 @@
   height: var(--box_width);
 }
 
-.box04, .box18, .box13, .box16, .box09, .box23, .box05, .box17, .box08 {
+.box {
   background: var(--color_accent);
 }
 
-.box01, .box02, .box11, .box14, .box20, .box19, .box24 {
-  background: var(--color_secondary);
+.box:nth-child(0n + 3), .box:nth-child(0n + 7), .box:nth-child(0n + 9), .box:nth-child(0n + 11),
+.box:nth-child(0n + 16), .box:nth-child(0n + 19), .box:nth-child(0n + 22), .box:nth-child(0n + 25) {
+    background: var(--color_primary);
+    box-shadow: 2px 3px 3px rgb(0 0 0 / 20%);
+    position: relative;
+    z-index: 1;
 }
 
-.box03, .box06, .box22, .box12, .box15, .box07, .box21, .box10 {
-  background: var(--color_primary);
-  box-shadow: 2px 3px 3px rgb(0 0 0 / 20%);
-  position: relative;
-  z-index: 1;
+.box:nth-child(0n + 2), .box:nth-child(0n + 5), .box:nth-child(0n + 14),
+.box:nth-child(0n + 18), .box:nth-child(0n + 20), .box:nth-child(0n + 24), .box:nth-child(0n + 28) {
+  background: var(--color_secondary);
 }
 
 .not-supported {

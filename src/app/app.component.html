@@ -4,39 +4,16 @@
       <img src="assets/om.jpg"/>
       <p (click)="toggleEnable()">Békés adventi heteket és áldott karácsonyt kíván a Jóga a Mindennapi Életben Egyesület!</p>
     </div>
-    <div class="box box01" [class.active]="isActive(1)"  [class.inactive]="isInactive(1)" (click)="openDay(1)">1</div>
-    <div class="box box06" [class.active]="isActive(6)"  [class.inactive]="isInactive(6)" (click)="openDay(6)">6</div>
-    <div class="box box18" [class.active]="isActive(18)" [class.inactive]="isInactive(18)" (click)="openDay(18)">18</div>
-    <div class="box box20" [class.active]="isActive(20)" [class.inactive]="isInactive(20)" (click)="openDay(20)">20</div>
-    <div class="box box23" [class.active]="isActive(23)" [class.inactive]="isInactive(23)" (click)="openDay(23)">23</div>
-    <div class="box box15" [class.active]="isActive(15)" [class.inactive]="isInactive(15)" (click)="openDay(15)">15</div>
-    <div class="box box17" [class.active]="isActive(17)" [class.inactive]="isInactive(17)" (click)="openDay(17)">17</div>
-    <div class="box box21" [class.active]="isActive(21)" [class.inactive]="isInactive(21)" (click)="openDay(21)">21</div>
-    <div class="card">
-      <app-quote [quoteModel]="getQuote(randomQuotes[1])"></app-quote>
+    <div *ngFor="let day of days; let i = index"
+         [class.box]="day > 0" [class.card]="day <= 0" [class.big]="day == 24"
+         [class.active]="isCurrentDay(day)"  [class.inactive]="isInactive(day)" (click)="openDay(day)">
+      <ng-container *ngIf="day > 0">
+        {{ day }}<div class="box_title" *ngIf="!isInactive(day) && !isCurrentDay(day) && displayBoxTitle">{{ getDay(day).title }}</div>
+      </ng-container>
+      <ng-container *ngIf="day <= 0">
+        <app-quote [quoteModel]="getQuote(randomQuotes[day * -1])"></app-quote>
+      </ng-container>
     </div>
-    <div class="box box07" [class.active]="isActive(7)" [class.inactive]="isInactive(7)" (click)="openDay(7)">7</div>
-    <div class="box box08" [class.active]="isActive(8)" [class.inactive]="isInactive(8)" (click)="openDay(8)">8</div>
-    <div class="card">
-      <app-quote [quoteModel]="getQuote(randomQuotes[0])"></app-quote>
-    </div>
-    <div class="box box19" [class.active]="isActive(19)" [class.inactive]="isInactive(19)" (click)="openDay(19)">19</div>
-    <div class="box box09" [class.active]="isActive(9)"  [class.inactive]="isInactive(9)" (click)="openDay(9)">9</div>
-    <div class="box box10" [class.active]="isActive(10)" [class.inactive]="isInactive(10)" (click)="openDay(10)">10</div>
-    <div class="box box13" [class.active]="isActive(13)" [class.inactive]="isInactive(13)" (click)="openDay(13)">13</div>
-    <div class="box box02" [class.active]="isActive(2)"  [class.inactive]="isInactive(2)" (click)="openDay(2)">2</div>
-    <div class="box box03" [class.active]="isActive(3)"  [class.inactive]="isInactive(3)" (click)="openDay(3)">3</div>
-    <div class="box box11" [class.active]="isActive(11)" [class.inactive]="isInactive(11)" (click)="openDay(11)">11</div>
-    <div class="box box04" [class.active]="isActive(4)"  [class.inactive]="isInactive(4)" (click)="openDay(4)">4</div>
-    <div class="box box12" [class.active]="isActive(12)" [class.inactive]="isInactive(12)" (click)="openDay(12)">12</div>
-    <div class="box box05" [class.active]="isActive(5)"  [class.inactive]="isInactive(5)" (click)="openDay(5)">5</div>
-    <div class="box box14" [class.active]="isActive(14)" [class.inactive]="isInactive(14)" (click)="openDay(14)">14</div>
-    <div class="box box22" [class.active]="isActive(22)" [class.inactive]="isInactive(22)" (click)="openDay(22)">22</div>
-    <div class="box box16" [class.active]="isActive(16)" [class.inactive]="isInactive(16)" (click)="openDay(16)">16</div>
-    <div class="card">
-      <app-quote [quoteModel]="getQuote(randomQuotes[2])"></app-quote>
-    </div>
-    <div class="box box24 big" [class.active]="isActive(24)" [class.inactive]="isInactive(24)" (click)="openDay(24)">24</div>
   </div>
   <p class="copyright" *ngIf="supported">
     Jóga a mindennapi életben <span (click)="toggleTheme()">©</span> 1998-2021 Minden jog fenntartva.

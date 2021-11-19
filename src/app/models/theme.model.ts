@@ -10,7 +10,7 @@ export const xmas: Theme = {
     '--color_bg_2': '#68a1ab',
     '--color_primary': '#ee7266',
     '--color_secondary': '#24535b',
-    '--color_accent': '#d0ddcc',
+    '--color_accent': '#b5bbad',
     '--color_day_text': '#ffffff',
     '--color_day_active_bg': '#000000',
     '--color_day_anim_bg1': '#000000',

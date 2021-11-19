@@ -18,7 +18,7 @@ export class DayDialogComponent {
 
   copyUrl() {
     if (this.hasNavigator) {
-      const url = window.location.origin + '/?day=' + this.data.day;
+      const url = window.location.origin + window.location.pathname + '?day=' + this.data.day;
       navigator.clipboard.writeText(url);
     }
   }

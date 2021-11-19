@@ -2,6 +2,13 @@
   text-align: center;
   width: 650px;
 
+  .close {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+  }
+
   h1 {
     color: var(--color_primary);
   }

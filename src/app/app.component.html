@@ -1,7 +1,7 @@
 <div class="content">
-  <div class="box_container" *ngIf="supported">
-    <div class="main" (click)="initQuotes()">
-      <img src="assets/om.jpg"/>
+  <div class="box_container" *ngIf="supported" [class.blur]="dialogUp">
+    <div class="main">
+      <img src="assets/om.jpg" (click)="openWelcome()"/>
       <p (click)="toggleEnable()">Békés adventi heteket és áldott karácsonyt kíván a Jóga a Mindennapi Életben Egyesület!</p>
     </div>
     <div *ngFor="let day of days; let i = index"

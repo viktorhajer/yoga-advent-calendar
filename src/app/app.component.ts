@@ -7,7 +7,7 @@ import {GOD_MODE} from './app.constant';
 import {ThemeService} from './services/theme.service';
 import {DocumentModel} from './models/document.model';
 import {CALENDAR} from './repository/advent-calendar.db';
-import {ActivatedRoute, Params} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 
 const WINDOW_MIN_WIDTH = 1010;
 const WINDOW_MIN_HEIGHT = 760;
@@ -27,6 +27,7 @@ export class AppComponent {
   minHeight = WINDOW_MIN_HEIGHT;
   days = [1, 6, 18, 20, 23, 15, 17, 21, 0, 7, 8, -1, 19, 9, 10, 13, 2, 3, 11, 4, 12, 5, 14, 22, 16, -2, 24];
   displayBoxTitle = true;
+  dialogUp = false;
 
   constructor(private readonly eventService: EventService,
               private readonly activatedRoute: ActivatedRoute,
@@ -34,32 +35,13 @@ export class AppComponent {
               private readonly dialogService: DialogService) {
     this.initQuotes();
     this.initSupported();
-    this.startQuoteInterval();
-    this.startQuoteInterval(1, QUOTE_INTERVAL / 4);
-    this.startQuoteInterval(2, QUOTE_INTERVAL / 2);
-    if (this.supported && false) {
-      this.dialogService.openWelcome();
-    }
-    this.activatedRoute.queryParams.subscribe(params => {
-      const day = params['day'];
-      if (day && Number(day) <= 24 && Number(day) > 0) {
-        this.openDay(day);
-      }
-    });
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    this.initSupported();
-  }
-
-  initQuotes() {
-    this.randomQuotes = this.eventService.getRandomNumbers(this.quotes.length);
+    this.initWelcome();
   }
 
   openDay(day: number) {
-    if (!this.isInactive(day)) {
-      this.dialogService.openDay(day);
+    if (day > 0 && !this.isInactive(day)) {
+      this.dialogUp = true;
+      this.dialogService.openDay(day).subscribe(() => this.dialogUp = false);
     }
   }
 
@@ -73,12 +55,12 @@ export class AppComponent {
 
   isInactive(day: number): boolean {
     const now = new Date();
-    return 2021 === now.getFullYear() && (11 === now.getMonth() && day > now.getDate()) || (11 > now.getMonth()) && !this.allEnabled;
+    return day > 0 && 2021 === now.getFullYear() && (11 === now.getMonth() && day > now.getDate()) || (11 > now.getMonth()) && !this.allEnabled;
   }
 
   isCurrentDay(day: number): boolean {
     const now = new Date();
-    return 2021 === now.getFullYear() && (GOD_MODE ? 10 : 11) === now.getMonth() && day === now.getDate();
+    return day > 0 && 2021 === now.getFullYear() && (GOD_MODE ? 10 : 11) === now.getMonth() && day === now.getDate();
   }
 
   toggleTheme() {
@@ -91,8 +73,38 @@ export class AppComponent {
     }
   }
 
-  initSupported() {
+  openWelcome() {
+    this.dialogUp = true;
+    this.dialogService.openWelcome().subscribe(() => this.dialogUp = false);
+  }
+
+  private initWelcome() {
+    if (this.supported) {
+      this.activatedRoute.queryParams.subscribe(params => {
+        const day = params['day'];
+        if (day && Number(day) <= 24 && Number(day) > 0) {
+          this.openDay(day);
+        } else {
+          this.openWelcome();
+        }
+      });
+    }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  private onResize() {
+    this.initSupported();
+  }
+
+  private initSupported() {
     this.supported = window.innerWidth >= WINDOW_MIN_WIDTH && window.innerHeight >= WINDOW_MIN_HEIGHT;
+  }
+
+  private initQuotes() {
+    this.randomQuotes = this.eventService.getRandomNumbers(this.quotes.length);
+    this.startQuoteInterval();
+    this.startQuoteInterval(1, QUOTE_INTERVAL / 4);
+    this.startQuoteInterval(2, QUOTE_INTERVAL / 2);
   }
 
   private startQuoteInterval(index = 0, delay = 0) {

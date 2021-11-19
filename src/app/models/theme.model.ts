@@ -114,3 +114,31 @@ export const leaf: Theme = {
     '--main_img_filter': 'invert() opacity(0.6)'
   }
 };
+
+export const ocean: Theme = {
+  name: 'ocean',
+  properties: {
+    '--color_bg_1': '#000000',
+    '--color_bg_2': '#666666',
+    '--color_primary': '#8baebb',
+    '--color_secondary': '#94c9dd',
+    '--color_accent': '#154a5e',
+    '--color_day_text': '#ffffff',
+    '--color_day_active_bg': '#000000',
+    '--color_day_anim_bg1': '#0e313e',
+    '--color_day_anim_bg2': '#154a5e',
+    '--color_day_anim_text': '#ffffff',
+    '--color_container_bg': '#ffffff',
+    '--color_main_bg': '#ffffff',
+    '--color_main_text': '#767676',
+    '--color_card_bg': '#ffffff',
+    '--color_card_text': '#767676',
+    '--color_box_bg': '#ffffff',
+    '--color_box_text': '#000000',
+    '--color_box_src_text': '#000000',
+    '--color_box_src_border': '#d3d3d3',
+    '--color_copyright': '#3d7d95',
+    '--color_not_supported_text': '#ffffff',
+    '--main_img_filter': 'invert() opacity(1)'
+  }
+};

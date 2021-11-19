@@ -17,7 +17,7 @@ export class DayDialogComponent {
   }
 
   getEncodedURL(): string {
-    return encodeURIComponent(this.getURL())
+    return encodeURIComponent(this.getURL());
   }
 
   copyUrl() {

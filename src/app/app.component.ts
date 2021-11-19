@@ -78,6 +78,10 @@ export class AppComponent {
     this.dialogService.openWelcome().subscribe(() => this.dialogUp = false);
   }
 
+  getEncodedURL(): string {
+    return encodeURIComponent(window.location.origin + window.location.pathname);
+  }
+
   private initWelcome() {
     if (this.supported) {
       this.activatedRoute.queryParams.subscribe(params => {

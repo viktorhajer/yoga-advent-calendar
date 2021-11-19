@@ -53,8 +53,8 @@
   position: relative;
 
   &.inactive, &.inactive:hover {
-    filter: blur(2px) sepia(0.3) grayscale(0.2);
-    opacity: 0.8;
+    filter: blur(3px) sepia(0.3) grayscale(1);
+    opacity: 0.6;
     cursor: auto;
   }
 

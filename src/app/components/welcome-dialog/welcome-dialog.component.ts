@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {MatDialogRef} from '@angular/material/dialog';
-import {GOD_MODE} from '../../app.constant';
 
 @Component({
   selector: 'app-welcome-dialog',
@@ -22,8 +21,6 @@ export class WelcomeDialogComponent {
   }
 
   close() {
-    if (GOD_MODE) {
-      this.dialogRef.close();
-    }
+    this.dialogRef.close();
   }
 }

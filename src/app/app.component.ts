@@ -3,7 +3,6 @@ import {EventService} from './services/event.service';
 import {QuoteModel} from './models/quote.model';
 import {GOLDEN_TEACHING} from './repository/golden-teaching.db';
 import {DialogService} from './services/dialog.service';
-import {GOD_MODE} from './app.constant';
 import {ThemeService} from './services/theme.service';
 import {DocumentModel} from './models/document.model';
 import {CALENDAR} from './repository/advent-calendar.db';
@@ -52,13 +51,13 @@ export class AppComponent {
   }
 
   isInactive(day: number): boolean {
-    const now = new Date();
+    const now = this.getToday();
     return day > 0 && 2021 === now.getFullYear() && (11 === now.getMonth() && day > now.getDate()) || (11 > now.getMonth()) && !this.allEnabled;
   }
 
   isCurrentDay(day: number): boolean {
-    const now = new Date();
-    return day > 0 && 2021 === now.getFullYear() && (GOD_MODE ? 10 : 11) === now.getMonth() && day === now.getDate();
+    const now = this.getToday();
+    return day > 0 && 2021 === now.getFullYear() && 11 === now.getMonth() && day === now.getDate();
   }
 
   toggleTheme() {
@@ -66,9 +65,7 @@ export class AppComponent {
   }
 
   toggleEnable() {
-    if (GOD_MODE) {
-      this.allEnabled = !this.allEnabled;
-    }
+    this.allEnabled = !this.allEnabled;
   }
 
   openWelcome() {
@@ -106,6 +103,10 @@ export class AppComponent {
     this.startQuoteInterval();
     this.startQuoteInterval(1, QUOTE_INTERVAL / 4);
     this.startQuoteInterval(2, QUOTE_INTERVAL / 2);
+  }
+
+  private getToday(): Date {
+    return new Date();
   }
 
   private startQuoteInterval(index = 0, delay = 0) {

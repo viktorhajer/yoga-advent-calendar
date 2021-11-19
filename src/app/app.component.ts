@@ -27,7 +27,6 @@ export class AppComponent {
   minHeight = WINDOW_MIN_HEIGHT;
   days = [1, 6, 18, 20, 23, 15, 17, 21, 0, 7, 8, -1, 19, 9, 10, 13, 2, 3, 11, 4, 12, 5, 14, 22, 16, -2, 24];
   displayBoxTitle = true;
-  dialogUp = false;
 
   constructor(private readonly eventService: EventService,
               private readonly activatedRoute: ActivatedRoute,
@@ -40,8 +39,7 @@ export class AppComponent {
 
   openDay(day: number) {
     if (day > 0 && !this.isInactive(day)) {
-      this.dialogUp = true;
-      this.dialogService.openDay(day).subscribe(() => this.dialogUp = false);
+      this.dialogService.openDay(day);
     }
   }
 
@@ -74,8 +72,7 @@ export class AppComponent {
   }
 
   openWelcome() {
-    this.dialogUp = true;
-    this.dialogService.openWelcome().subscribe(() => this.dialogUp = false);
+    this.dialogService.openWelcome();
   }
 
   getEncodedURL(): string {

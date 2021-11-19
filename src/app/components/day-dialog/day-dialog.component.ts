@@ -9,9 +9,18 @@ import {DocumentModel} from '../../models/document.model';
 })
 export class DayDialogComponent {
 
+  hasNavigator = !!navigator.clipboard;
+
   constructor(protected dialogRef: MatDialogRef<DayDialogComponent>,
               @Inject(MAT_DIALOG_DATA)
               public data: { day: number, document: DocumentModel }) {
+  }
+
+  copyUrl() {
+    if (this.hasNavigator) {
+      const url = window.location.origin + '/?day=' + this.data.day;
+      navigator.clipboard.writeText(url);
+    }
   }
 
   close() {

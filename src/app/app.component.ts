@@ -35,7 +35,7 @@ export class AppComponent {
               private readonly dialogService: DialogService) {
     this.initQuotes();
     this.initSupported();
-    this.initWelcome();
+    setTimeout(() => this.initWelcome(), 500);
   }
 
   openDay(day: number) {

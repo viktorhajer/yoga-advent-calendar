@@ -9,6 +9,7 @@ import {SafeUrlPipe} from './components/safeurl.pipe';
 import {QuoteComponent} from './components/quote/quote.component';
 import {WelcomeDialogComponent} from './components/welcome-dialog/welcome-dialog.component';
 import {RouterModule} from '@angular/router';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import {RouterModule} from '@angular/router';
     CommonModule,
     BrowserModule,
     MatDialogModule,
+    MatIconModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([{
       path: '**',

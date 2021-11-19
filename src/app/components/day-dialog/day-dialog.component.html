@@ -6,7 +6,10 @@
       <span *ngIf="data.document.type === 'lecture'">Tanítás: </span>
       {{ data.document.title }}
     </h2>
-    <div class="close" (click)="close()">&#10006;</div>
+    <div class="actions">
+      <mat-icon *ngIf="hasNavigator" class="copy" (click)="copyUrl()">link</mat-icon>
+      <mat-icon class="close" (click)="close()">close</mat-icon>
+    </div>
   </div>
   <div class="document-content">
     <div class="image-container" *ngIf="data.document.image"

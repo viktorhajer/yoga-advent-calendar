@@ -4,10 +4,20 @@
   justify-content: space-between;
   margin-bottom: 15px;
 
-  .close {
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
+  .actions {
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    mat-icon {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+
+    mat-icon:hover {
+      opacity: 1;
+    }
   }
 }
 

@@ -13,9 +13,18 @@
 .copyright {
   text-align: center;
   margin-top: 13px;
-  font-size: 10px;
+  font-size: 11px;
   color: var(--color_copyright);
   margin-bottom: 0;
+
+  a, a:visited {
+    color: var(--color_copyright);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
 .content {

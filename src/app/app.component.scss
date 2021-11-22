@@ -1,4 +1,4 @@
-@keyframes activeBox {
+@keyframes active-box {
   0% {
     background-color: var(--color_day_anim_bg1);
   }
@@ -60,7 +60,7 @@
 
   &.active {
     color: var(--color_day_anim_text);
-    animation-name: activeBox;
+    animation-name: active-box;
     animation-duration: 800ms;
     animation-iteration-count: infinite;
   }

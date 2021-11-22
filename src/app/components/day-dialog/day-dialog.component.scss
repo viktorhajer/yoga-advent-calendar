@@ -35,6 +35,9 @@
   .image-container {
     margin: 0 15px 5px 0;
     height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &.total {
       width: 760px;
@@ -53,6 +56,13 @@
     img {
       width: 100%;
     }
+
+    .img-loaded {
+      animation-name: img-display;
+      animation-duration: 800ms;
+      animation-iteration-count: 1;
+    }
+
   }
 
   .document-content {
@@ -101,5 +111,14 @@
         float: none;
       }
     }
+  }
+}
+
+@keyframes img-display {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

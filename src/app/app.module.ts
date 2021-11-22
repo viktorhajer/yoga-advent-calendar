@@ -11,6 +11,7 @@ import {WelcomeDialogComponent} from './components/welcome-dialog/welcome-dialog
 import {RouterModule} from '@angular/router';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {SpinnerComponent} from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     DayDialogComponent,
     WelcomeDialogComponent,
     QuoteComponent,
-    SafeUrlPipe
+    SafeUrlPipe,
+    SpinnerComponent
   ],
   imports: [
     CommonModule,

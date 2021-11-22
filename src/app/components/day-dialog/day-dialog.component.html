@@ -19,7 +19,9 @@
          [class.total]="data.document.image.dir === 't'"
          [class.left]="data.document.image.dir === 'l'"
          [class.right]="data.document.image.dir === 'r'">
-      <img src="assets/images/{{data.document.image.src}}" />
+      <img src="assets/images/{{data.document.image.src}}" (load)="imageLoaded()"
+           [hidden]="!loaded" [class.img-loaded]="loaded"/>
+      <app-spinner *ngIf="!loaded"></app-spinner>
     </div>
     <div *ngIf="data.document.content" [innerHTML]="data.document.content"></div>
   </div>

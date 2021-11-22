@@ -10,10 +10,15 @@ import {DocumentModel} from '../../models/document.model';
 export class DayDialogComponent {
 
   hasNavigator = !!navigator.clipboard;
+  loaded = false;
 
   constructor(protected dialogRef: MatDialogRef<DayDialogComponent>,
               @Inject(MAT_DIALOG_DATA)
               public data: { day: number, document: DocumentModel }) {
+  }
+
+  imageLoaded() {
+    this.loaded = true;
   }
 
   getEncodedURL(): string {

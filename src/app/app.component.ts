@@ -8,8 +8,8 @@ import {DocumentModel} from './models/document.model';
 import {CALENDAR} from './repository/advent-calendar.db';
 import {ActivatedRoute} from '@angular/router';
 
-const WINDOW_MIN_WIDTH = 1010;
-const WINDOW_MIN_HEIGHT = 760;
+const WINDOW_MIN_WIDTH = 1000;
+const WINDOW_MIN_HEIGHT = 700;
 const QUOTE_INTERVAL = 10000;
 
 @Component({

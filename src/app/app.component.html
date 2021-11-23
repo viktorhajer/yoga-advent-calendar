@@ -18,16 +18,16 @@
       </ng-container>
     </div>
   </div>
-  <p class="copyright" *ngIf="supported">
+  <div class="not-supported" *ngIf="!supported">
+    <h1>Hari Om, kedves látogató!</h1>
+    Az Ön által használt eszköz felbontása túl alacsony az oldal megnyitásához.
+    A minimális felbontás {{ minWidth }}x{{ minHeight }}.
+    <br> Kérem, próbálja megnyitni az oldalt asztali számítógépen.
+  </div>
+  <p class="copyright" [class.cp-not_supported]="!supported">
     Jóga a mindennapi <span (click)="toggleTheme()">életben</span> &#8226;
     <a href="https://www.jogaszeged.hu/" target="_blank">www.jogaszeged.hu</a> &#8226;
     <a href="https://www.joga.hu/" target="_blank">www.joga.hu</a> &#8226;
     <a href="https://www.yogaindailylife.org/" target="_blank">www.yogaindailylife.org</a>
   </p>
-
-  <div class="not-supported" *ngIf="!supported">
-    <h1>Nem támogatott eszköz!</h1>
-    Az oldal által támogatott minimális felbontás {{ minWidth }}x{{ minHeight }}.
-    <br> Kérem, próbálja megnyitni az oldalt asztali számítógépen.
-  </div>
 </div>

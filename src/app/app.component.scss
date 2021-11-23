@@ -25,6 +25,11 @@
   a:hover {
     text-decoration: underline;
   }
+
+  &.cp-not_supported {
+    width: 380px;
+    text-align: left;
+  }
 }
 
 .content {
@@ -181,6 +186,6 @@
 }
 
 .not-supported {
-  padding: 20px;
+  width: 380px;
   color: var(--color_not_supported_text);
 }

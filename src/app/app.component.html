@@ -21,8 +21,11 @@
   <div class="not-supported" *ngIf="!supported">
     <h1>Hari Om, kedves látogató!</h1>
     Az Ön által használt eszköz felbontása túl alacsony az oldal megnyitásához.
-    A minimális felbontás {{ minWidth }}x{{ minHeight }}.
-    <br> Kérem, próbálja megnyitni az oldalt asztali számítógépen.
+    A minimális felbontás {{ minWidth }} x {{ minHeight }}.
+    <br>
+    Kérem, próbálja megnyitni az oldalt asztali számítógépen.
+    <br>
+    A mennyiben a hiba továbbra is fennáll, írjon az <a href="mailto:info@jogaszeged.hu">info@jogaszeged.hu</a> címre, és igyekszünk segíteni.
   </div>
   <p class="copyright" [class.cp-not_supported]="!supported">
     Jóga a mindennapi <span (click)="toggleTheme()">életben</span> &#8226;

@@ -27,7 +27,8 @@
   }
 
   &.cp-not_supported {
-    width: 380px;
+    max-width: 320px;
+    width: calc(100% - 20px);
     text-align: left;
   }
 }
@@ -186,6 +187,20 @@
 }
 
 .not-supported {
-  width: 380px;
+  max-width: 320px;
+  width: calc(100% - 20px);
+  line-height: 24px;
   color: var(--color_not_supported_text);
+  text-align: left;
+  margin-bottom: 12px;
+  font-size: 12px;
+
+  a, a:visited {
+    color: var(--color_not_supported_text);
+    text-decoration: underline;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 }

@@ -16,12 +16,14 @@ export class DialogService {
   openDay(day: number): Observable<void> {
     const document = CALENDAR[day - 1];
     return this.dialog.open(DayDialogComponent, {
-      panelClass: 'day-modal',
+      panelClass: 'full-modal',
       data: {day, document}
     }).afterClosed();
   }
 
   openWelcome(): Observable<void> {
-    return this.dialog.open(WelcomeDialogComponent).afterClosed();
+    return this.dialog.open(WelcomeDialogComponent, {
+      panelClass: 'full-modal'
+    }).afterClosed();
   }
 }

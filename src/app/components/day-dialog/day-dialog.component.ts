@@ -1,6 +1,7 @@
 import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {DocumentModel} from '../../models/document.model';
+import {DocumentSequenceModel} from '../../models/document-sequence.model';
 
 @Component({
   selector: 'app-day-dialog',
@@ -14,7 +15,7 @@ export class DayDialogComponent {
 
   constructor(protected dialogRef: MatDialogRef<DayDialogComponent>,
               @Inject(MAT_DIALOG_DATA)
-              public data: { day: number, document: DocumentModel }) {
+              public data: { day: number, document: DocumentModel, sequence: DocumentSequenceModel }) {
   }
 
   imageLoaded() {

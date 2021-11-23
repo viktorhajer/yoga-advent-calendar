@@ -1,10 +1,10 @@
-<div class="dialog-content" *ngIf="data.document">
+<div class="dialog-content" *ngIf="data.document || data.sequence">
   <div class="dialog_header">
     <h2 class="title">
       <span class="day">{{ data.day }}.&nbsp;</span>
-      <span *ngIf="data.document.type === 'asana'">Gyakorlás: </span>
-      <span *ngIf="data.document.type === 'lecture'">Tanítás: </span>
-      {{ data.document.title }}
+      <span *ngIf="data.document && data.document.type === 'asana'">Gyakorlás: </span>
+      <span *ngIf="data.document && data.document.type === 'lecture'">Tanítás: </span>
+      {{ data.document ? data.document.title : data.sequence.title }}
     </h2>
     <div class="actions">
       <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{getEncodedURL()}}&amp;src=sdkpreparse">
@@ -14,7 +14,8 @@
       <mat-icon class="close" (click)="close()" matTooltip="Bezárás">close</mat-icon>
     </div>
   </div>
-  <div class="document-content">
+
+  <div class="document-content" *ngIf="data.document">
     <div class="image-container" *ngIf="data.document.image"
          [class.total]="data.document.image.dir === 't'"
          [class.left]="data.document.image.dir === 'l'"
@@ -25,10 +26,13 @@
     </div>
     <div *ngIf="data.document.content" [innerHTML]="data.document.content"></div>
   </div>
-  <div class="src-container" *ngIf="data.document.src">
+  <div class="src-container" *ngIf="data.document && data.document.src">
     <a target="_blank" [href]="data.document.src | safeUrl ">
       <span *ngIf="data.document.type === 'asana'">További információ a gyakorlatról</span>
       <span *ngIf="data.document.type === 'lecture'">Kattints ide a videófelvétel megtekintéséhez</span>
     </a>
   </div>
+
+  <div class="document-content" *ngIf="data.sequence && data.sequence.description"
+       [innerHTML]="data.sequence.description"></div>
 </div>

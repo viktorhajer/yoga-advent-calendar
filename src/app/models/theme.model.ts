@@ -25,6 +25,8 @@ export const xmas: Theme = {
     '--color_box_text': '#000000',
     '--color_box_src_text': '#000000',
     '--color_box_src_border': '#d3d3d3',
+    '--color_box_button_text': '#ffffff',
+    '--color_box_button_bg': '#000000',
     '--color_copyright': '#d6d6d6',
     '--color_not_supported_text': '#ffffff',
     '--main_img_filter': 'none'
@@ -53,6 +55,8 @@ export const jeans: Theme = {
     '--color_box_text': '#000000',
     '--color_box_src_text': '#000000',
     '--color_box_src_border': '#d3d3d3',
+    '--color_box_button_text': '#ffffff',
+    '--color_box_button_bg': '#000000',
     '--color_copyright': '#595959',
     '--color_not_supported_text': '#ffffff',
     '--main_img_filter': 'invert()'
@@ -81,6 +85,8 @@ export const elegant: Theme = {
     '--color_box_text': '#000000',
     '--color_box_src_text': '#000000',
     '--color_box_src_border': '#d3d3d3',
+    '--color_box_button_text': '#ffffff',
+    '--color_box_button_bg': '#000000',
     '--color_copyright': '#717171',
     '--color_not_supported_text': '#ffffff',
     '--main_img_filter': 'none'
@@ -109,6 +115,8 @@ export const leaf: Theme = {
     '--color_box_text': '#000000',
     '--color_box_src_text': '#000000',
     '--color_box_src_border': '#d3d3d3',
+    '--color_box_button_text': '#ffffff',
+    '--color_box_button_bg': '#000000',
     '--color_copyright': '#d1edc1',
     '--color_not_supported_text': '#ffffff',
     '--main_img_filter': 'invert() opacity(0.6)'
@@ -137,6 +145,8 @@ export const ocean: Theme = {
     '--color_box_text': '#000000',
     '--color_box_src_text': '#000000',
     '--color_box_src_border': '#d3d3d3',
+    '--color_box_button_text': '#ffffff',
+    '--color_box_button_bg': '#000000',
     '--color_copyright': '#3d7d95',
     '--color_not_supported_text': '#ffffff',
     '--main_img_filter': 'invert() opacity(1)'

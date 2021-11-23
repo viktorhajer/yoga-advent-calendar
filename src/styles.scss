@@ -19,6 +19,8 @@
   --color_box_text: #000000;
   --color_box_src_text: #000000;
   --color_box_src_border: #d3d3d3;
+  --color_box_button_text: #ffffff;
+  --color_box_button_bg: #000000;
   --color_copyright: #d6d6d6;
   --color_not_supported_text: #ffffff;
   --main_img_filter: none;
@@ -51,11 +53,8 @@ body {
   color: #ee7266;
 }
 
-.day-modal {
-  width: 900px;
-}
 @media (max-width: 900px) {
-  .day-modal {
+  .full-modal {
     max-width: unset !important;
     width: 100%;
     height: 100%;

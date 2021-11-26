@@ -18,7 +18,7 @@ const QUOTE_INTERVAL = 10000;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  allEnabled = true;
+  allEnabled = false;
   randomQuotes: number[] = [0, 0, 0];
   quotes = GOLDEN_TEACHING;
   supported = true;
@@ -65,7 +65,7 @@ export class AppComponent {
   }
 
   toggleEnable() {
-    this.allEnabled = !this.allEnabled;
+    // this.allEnabled = !this.allEnabled;
   }
 
   openWelcome() {

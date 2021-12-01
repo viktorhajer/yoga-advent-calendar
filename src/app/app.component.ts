@@ -86,6 +86,8 @@ export class AppComponent {
           this.openWelcome();
         }
       });
+    } else {
+      this.openDay(new Date().getDate());
     }
   }
 

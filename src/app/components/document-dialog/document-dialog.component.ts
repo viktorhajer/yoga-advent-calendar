@@ -2,20 +2,22 @@ import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {DocumentModel} from '../../models/document.model';
 import {DocumentSequenceModel} from '../../models/document-sequence.model';
+import {DialogService} from '../../services/dialog.service';
 
 @Component({
-  selector: 'app-day-dialog',
-  templateUrl: './day-dialog.component.html',
-  styleUrls: ['./day-dialog.component.scss']
+  selector: 'app-document-dialog',
+  templateUrl: './document-dialog.component.html',
+  styleUrls: ['./document-dialog.component.scss']
 })
-export class DayDialogComponent {
+export class DocumentDialogComponent {
 
   hasNavigator = !!navigator.clipboard;
   loaded = false;
 
-  constructor(protected dialogRef: MatDialogRef<DayDialogComponent>,
+  constructor(protected dialogRef: MatDialogRef<DocumentDialogComponent>,
               @Inject(MAT_DIALOG_DATA)
-              public data: { day: number, document: DocumentModel, sequence: DocumentSequenceModel }) {
+              public data: { index: number, document: DocumentModel, sequence: DocumentSequenceModel },
+              private readonly dialogService: DialogService) {
   }
 
   imageLoaded() {
@@ -32,11 +34,15 @@ export class DayDialogComponent {
     }
   }
 
+  openDocument(index: number, document: DocumentModel) {
+    this.dialogService.openDocument(index, document);
+  }
+
   close() {
     this.dialogRef.close();
   }
 
   private getURL(): string {
-    return window.location.origin + window.location.pathname + '?day=' + this.data.day;
+    return window.location.origin + window.location.pathname + '?day=' + this.data.index;
   }
 }

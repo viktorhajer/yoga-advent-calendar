@@ -2,10 +2,10 @@
   <div class="box_container" *ngIf="supported">
     <div class="main">
       <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{getEncodedURL()}}&amp;src=sdkpreparse">
-        <mat-icon matTooltip="Megosztás Facebook-on">share</mat-icon>
+        <mat-icon title="Megosztás Facebook-on">share</mat-icon>
       </a>
       <img src="assets/om.jpg" (click)="openWelcome()"/>
-      <p (click)="toggleEnable()">Békés adventi heteket és áldott karácsonyt kíván a Jóga a Mindennapi Életben Egyesület!</p>
+      <p>{{ openScreenText }}</p>
     </div>
     <div *ngFor="let day of days; let i = index"
          [class.box]="day > 0" [class.card]="day <= 0" [class.big]="day == 24"

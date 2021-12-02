@@ -1,12 +1,12 @@
 import {Component, HostListener} from '@angular/core';
 import {EventService} from './services/event.service';
 import {QuoteModel} from './models/quote.model';
-import {GOLDEN_TEACHING} from './repository/golden-teaching.db';
 import {DialogService} from './services/dialog.service';
 import {ThemeService} from './services/theme.service';
 import {DocumentModel} from './models/document.model';
 import {CALENDAR} from './repository/advent-calendar.db';
 import {ActivatedRoute} from '@angular/router';
+import {ALL_ENABLED, WELCOME_DIALOG_END_DATE, OPEN_SCREEN_TEXT, QUOTE_DB, START_TIME} from './content.constant';
 
 const WINDOW_MIN_WIDTH = 1000;
 const WINDOW_MIN_HEIGHT = 700;
@@ -18,9 +18,9 @@ const QUOTE_INTERVAL = 10000;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  allEnabled = false;
+  openScreenText = OPEN_SCREEN_TEXT;
   randomQuotes: number[] = [0, 0, 0];
-  quotes = GOLDEN_TEACHING;
+  quotes = QUOTE_DB;
   supported = true;
   minWidth = WINDOW_MIN_WIDTH;
   minHeight = WINDOW_MIN_HEIGHT;
@@ -52,20 +52,20 @@ export class AppComponent {
 
   isInactive(day: number): boolean {
     const now = this.getToday();
-    return day > 0 && 2021 === now.getFullYear() && (11 === now.getMonth() && day > now.getDate()) || (11 > now.getMonth()) && !this.allEnabled;
+    const date = this.removeTime(START_TIME);
+    date.setDate(START_TIME.getDate() + day - 1);
+    return date > now && !ALL_ENABLED;
   }
 
   isCurrentDay(day: number): boolean {
     const now = this.getToday();
-    return day > 0 && 2021 === now.getFullYear() && 11 === now.getMonth() && day === now.getDate();
+    const date = new Date(START_TIME);
+    date.setDate(START_TIME.getDate() + day - 1);
+    return this.formatDate(date) === this.formatDate(now);
   }
 
   toggleTheme() {
     this.themeService.toggleTheme();
-  }
-
-  toggleEnable() {
-    // this.allEnabled = !this.allEnabled;
   }
 
   openWelcome() {
@@ -76,13 +76,17 @@ export class AppComponent {
     return encodeURIComponent(window.location.origin + window.location.pathname);
   }
 
+  private formatDate(date: Date): string {
+    return new Intl.DateTimeFormat('en', {dateStyle: 'short'}).format(date);
+  }
+
   private initWelcome() {
     if (this.supported) {
       this.activatedRoute.queryParams.subscribe(params => {
         const day = params['day'];
         if (day && Number(day) <= 24 && Number(day) > 0) {
           this.openDay(day);
-        } else {
+        } else if (this.removeTime(WELCOME_DIALOG_END_DATE) >= this.getToday()){
           this.openWelcome();
         }
       });
@@ -108,7 +112,11 @@ export class AppComponent {
   }
 
   private getToday(): Date {
-    return new Date();
+    return this.removeTime(new Date());
+  }
+
+  private removeTime(date: Date): Date {
+    return new Date(this.formatDate(date));
   }
 
   private startQuoteInterval(index = 0, delay = 0) {

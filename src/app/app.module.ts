@@ -4,19 +4,18 @@ import {AppComponent} from './app.component';
 import {CommonModule} from '@angular/common';
 import {MatDialogModule} from '@angular/material/dialog';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {DayDialogComponent} from './components/day-dialog/day-dialog.component';
+import {DocumentDialogComponent} from './components/document-dialog/document-dialog.component';
 import {SafeUrlPipe} from './components/safeurl.pipe';
 import {QuoteComponent} from './components/quote/quote.component';
 import {WelcomeDialogComponent} from './components/welcome-dialog/welcome-dialog.component';
 import {RouterModule} from '@angular/router';
 import {MatIconModule} from '@angular/material/icon';
-import {MatTooltipModule} from '@angular/material/tooltip';
 import {SpinnerComponent} from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DayDialogComponent,
+    DocumentDialogComponent,
     WelcomeDialogComponent,
     QuoteComponent,
     SafeUrlPipe,
@@ -27,7 +26,6 @@ import {SpinnerComponent} from './components/spinner/spinner.component';
     BrowserModule,
     MatDialogModule,
     MatIconModule,
-    MatTooltipModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([{
       path: '**',

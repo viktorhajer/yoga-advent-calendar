@@ -90,10 +90,6 @@ export const QUOTES: QuoteModel[] = [
     author: ''
   },
   {
-    content: 'Örülök neki, hogy valamit jól tettem, és elkövettem számos hibát, hiszen mindegyik nagy lecke volt. Én, ahogy most vagyok, azon dolgok eredménye vagyok, amiket tettem, amiket gondoltam. Minden cselekedetnek és gondolatnak megvan a maga hatása, és ezek a hatások teszik ki előrehaladásom végeredményét.',
-    author: ''
-  },
-  {
     content: 'Olyannak látjuk a világot, amilyenek mi magunk vagyunk.',
     author: ''
   },
@@ -196,10 +192,6 @@ export const QUOTES: QuoteModel[] = [
   {
     content: 'Bármi amid van, elvehetik tőled, de amit adsz az örökre a tiéd marad.',
     author: ''
-  },
-  {
-    content: 'Ha nem szereted magad, ha folyton elítéled és elutasítod magad, akkor nincs olyan Isten a földön, és nincs olyan angyal a mennyben, aki segíthet rajtad. Egyvalamivel rendelkezned kell: az Én kegyelmével.',
-    author: 'Swami Rama'
   },
   {
     content: 'Saját önvalónk a legjobb barátunk mind közül, és ha megtanulunk belső párbeszédet folytatni belső önvalónkkal, sohasem fogunk félni önmagunktól. Emellett senki mástól sem fogunk félni.',

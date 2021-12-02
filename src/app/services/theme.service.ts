@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
-import {jeans, xmas, Theme, elegant, leaf, ocean} from '../models/theme.model';
+import {jeans, xmas, elegant, leaf, ocean} from '../theme.constant';
+import {Theme} from '../models/theme.model';
 
 @Injectable({
   providedIn: 'root'

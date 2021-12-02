@@ -91,6 +91,76 @@
   }
 }
 
+.sequence-content {
+  display: flex;
+  flex-flow: column;
+  margin-top: 20px;
+
+  .sequence-doc {
+    align-items: center;
+    height: 60px;
+    margin-bottom: 2px;
+    background: var(--color_box_button_bg);
+    color: var(--color_box_button_text);
+    font-weight: 500;
+    cursor: pointer;
+    overflow: hidden;
+
+    div:first-child {
+      display: flex;
+      z-index: 10;
+      position: relative;
+      align-items: center;
+      height: 100%;
+
+      div {
+        transition: all 0.3s;
+      }
+
+      div:first-child {
+        width: 20px;
+        padding: 0 8px;
+        opacity: 0.6;
+        justify-content: center;
+        margin-right: 10px;
+        background: var(--color_box_button_bg_active);
+      }
+
+      div:nth-child(2) {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: calc(100% - 60px);
+        opacity: 0.6;
+
+        .document-description {
+          font-size: 10px;
+        }
+      }
+    }
+
+    .sequence-doc-background {
+      transition: all 0.3s;
+      transition-timing-function: ease-in-out;
+      width: 100%;
+      height: 100%;
+      background: var(--color_box_button_bg_active);
+      position: relative;
+      top: -100%;
+      left: 100%;
+    }
+  }
+
+  .sequence-doc:hover {
+    div:first-child div {
+      opacity: 1;
+    }
+    .sequence-doc-background {
+      left: 0;
+    }
+  }
+}
+
 @media (max-width: 760px) {
   .dialog-content {
     .image-container {

@@ -1,8 +1,6 @@
 <div class="dialog-content">
-  <mat-icon class="close" (click)="close()" matTooltip="Bezárás">close</mat-icon>
-  <h1>Hari Om, kedves látogató!</h1>
-  <p>A Jóga a mindennapi életben rendszer adventi naptárát látod. Minden nap egy meglepetés történet, vagy jógagyakorlat vár. Lepd
-    meg magad, vagy szeretteid ezzel az online adventi naptárral. Oszd meg ismerőseiddel, barátaiddal az adventi
-    várakozás izgalmát. <br/><br/>Áldott, békés karácsonyt kívánunk!</p>
+  <mat-icon class="close" (click)="close()" title="Bezárás">close</mat-icon>
+  <h1> {{ title }}</h1>
+  <p [innerHTML]="content"></p>
   <div *ngIf="days != 0 || hours != 0">Már csak <span *ngIf="days">{{days}} nap és </span><span>{{hours}}</span> óra van hátra!</div>
 </div>

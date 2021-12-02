@@ -1,17 +1,17 @@
 <div class="dialog-content" *ngIf="data.document || data.sequence">
   <div class="dialog_header">
     <h2 class="title">
-      <span class="day">{{ data.day }}.&nbsp;</span>
+      <span>{{ data.index }}.&nbsp;</span>
       <span *ngIf="data.document && data.document.type === 'asana'">Gyakorlás: </span>
       <span *ngIf="data.document && data.document.type === 'lecture'">Tanítás: </span>
       {{ data.document ? data.document.title : data.sequence.title }}
     </h2>
     <div class="actions">
       <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{getEncodedURL()}}&amp;src=sdkpreparse">
-        <mat-icon matTooltip="Megosztás Facebook-on">share</mat-icon>
+        <mat-icon title="Megosztás Facebook-on">share</mat-icon>
       </a>
-      <mat-icon *ngIf="hasNavigator" class="copy" (click)="copyUrl()" matTooltip="Hivatkozás másolása">link</mat-icon>
-      <mat-icon class="close" (click)="close()" matTooltip="Bezárás">close</mat-icon>
+      <mat-icon *ngIf="hasNavigator" class="copy" (click)="copyUrl()" title="Hivatkozás másolása">link</mat-icon>
+      <mat-icon class="close" (click)="close()" title="Bezárás">close</mat-icon>
     </div>
   </div>
 
@@ -35,4 +35,19 @@
 
   <div class="document-content" *ngIf="data.sequence && data.sequence.description"
        [innerHTML]="data.sequence.description"></div>
+
+  <div class="sequence-content" *ngIf="data.sequence">
+    <div class="sequence-doc" *ngFor="let doc of data.sequence.documents; let i = index" (click)="openDocument(i+1, doc)">
+      <div>
+        <div>{{ i+1 }}</div>
+        <div>
+          <span *ngIf="doc.type === 'asana'">Gyakorlás: </span>
+          <span *ngIf="doc.type === 'lecture'">Tanítás: </span>
+          {{ doc.title }}<br/>
+          <span class="document-description" *ngIf="doc.description">{{ doc.description }}</span>
+        </div>
+      </div>
+      <div class="sequence-doc-background"></div>
+    </div>
+  </div>
 </div>

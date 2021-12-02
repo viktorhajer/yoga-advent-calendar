@@ -1,9 +1,11 @@
 import {MatDialog} from '@angular/material/dialog';
 import {CALENDAR} from '../repository/advent-calendar.db';
-import {DayDialogComponent} from '../components/day-dialog/day-dialog.component';
+import {DocumentDialogComponent} from '../components/document-dialog/document-dialog.component';
 import {Injectable} from '@angular/core';
 import {WelcomeDialogComponent} from '../components/welcome-dialog/welcome-dialog.component';
 import {Observable} from 'rxjs';
+import {DocumentSequenceModel} from '../models/document-sequence.model';
+import {DocumentModel} from '../models/document.model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,9 +17,20 @@ export class DialogService {
 
   openDay(day: number): Observable<void> {
     const document = CALENDAR[day - 1];
-    return this.dialog.open(DayDialogComponent, {
+    return this.openDocument(day, document);
+  }
+
+  openDocument(index: number, document: DocumentModel): Observable<void> {
+    return this.dialog.open(DocumentDialogComponent, {
       panelClass: 'full-modal',
-      data: {day, document}
+      data: {index, document}
+    }).afterClosed();
+  }
+
+  openSequence(index: number, sequence: DocumentSequenceModel): Observable<void> {
+    return this.dialog.open(DocumentDialogComponent, {
+      panelClass: 'full-modal',
+      data: {index, sequence}
     }).afterClosed();
   }
 
